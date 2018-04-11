@@ -1,0 +1,167 @@
+
+ .box-right{
+    /* height: 600px; */
+    width: 968px;
+}
+
+.tit{
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 25px;
+    background-color: #fff;
+}
+.tit h5{ 
+    height: 41px;
+    line-height: 41px;
+    font-size: 14px;
+    margin: 0;
+}
+.tit h5, .tit span, .tit i{
+    display: inline-block;
+}
+.tit i{
+    font-size: 12px;
+    color: #B2B2B2;
+}
+ .b-r-cen{
+    width: 100%;
+    /* height: 577px; */
+    background-color: #fff;
+    margin:20px 0;
+    padding: 20px 30px;
+ }
+
+.huimin p{
+    margin: 0 0 10px 0;
+    color: #3D3D3D;
+    font-size: 12px;
+}
+.huimin p span, label span{
+    color: #C5C5C5;
+    font-size: 11px;
+
+}
+
+.huimin>div{
+    height: 40px;
+     border-bottom: 1px solid #EAEAEA;
+ }
+ .huimin>div h5{
+     display: inline-block;
+     padding: 5px 15px;
+     height: 30px;
+     cursor: pointer;
+     border: 1px solid #EAEAEA;
+     border-bottom: 1px solid #fff;
+     color: red;
+ }
+
+ .huimin p{
+     margin: 10px 0;
+     color: #FF8763;
+ }
+
+/* form */
+.huimin form label{
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    margin:20px 0 20px 50px;;
+}
+.huimin form label input,.huimin form label select{
+    width: 250px;
+    height: 30px;
+    border:1px solid #F2F2F2;
+    text-indent: 10px;
+}
+.huimin form label input[type="radio"]{
+    width: 16px;  
+    position: relative;
+    top: -2px;
+    left: 0;
+}
+.huimin form label:nth-child(3) input{
+    width: 320px;  
+}
+.huimin form label:last-child .zheng,.huimin form label:last-child .fan{
+    width: 120px;
+    height: 90px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    border: 1px solid #F2F2F2;
+    overflow: hidden;
+}
+
+/* 星号 */
+.huimin form label i{
+    display: inline-block;
+    color: red;
+    position: relative;
+    top: 3px;
+    left: 0;
+}
+
+.huimin form .fileImg{
+    width: 120px;
+    height: 90px;
+    z-index: 100;
+}
+.fileImg::after{
+   content: "正";
+   width: 120px;
+   height: 90px;
+   position: absolute;
+   left: 0;
+   top: 0;
+   display: inline-block;
+   border: .3px solid #EAEAEA;
+   background-color: #fff;  
+}
+
+.huiminImgBox{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+#preview{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#preview1{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.huiminImgBox .clear,.huiminImgBox .clear1{
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    font-size: 20px;
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.huimin .save{
+    display: inline-block;
+    padding:0 10px;    
+    background-color: red;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 2px;
+    margin-left: 135px;
+}
+
+
+#province{
+    display: inline-block;
+}
+#province select{
+    width: 100px;
+    margin-right: 10px;
+}

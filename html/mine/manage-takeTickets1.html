@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>我的订阅</title>
+    <link rel="stylesheet" href="../../lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../../lib/idangerouSwiper/idangerous.swiper.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/mine/manage-takeTickets1.css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid wrap p0">
+        <script src="../../js/common/fot-common.js"></script>
+        <!-- 主体 -->
+        <div id="content_showInfo" class="bg_f9 col-xs-12 p0">
+            <div class="container box p0">
+                <!-- 主体开始 -->
+                <!-- 主体开始 -->
+                <div class="box-left col-md-2 p0">
+                    <ul>
+                        <li>
+                            <img src="../../img/content-btnbg4.png" alt="">
+                            <!-- <a href="../mine/order-recen.html"></a> -->
+                            <strong>我的艺票通</strong>
+                        </li>
+                        <li>
+                            <i class="line">
+                                <a href="../mine/order-recen.html" style="width:200px">订单中心</a>
+                            </i>
+                            <ol>
+                                <li>
+                                    <a href="../mine/order-mineRecen.html">我的订单</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/order-wallet.html">电子钱包</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/order-coupons.html">我的优惠券</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/order-integral.html">我的积分</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/order-register.html">预定登记</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/order-attention.html">我的关注</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <i class="line">
+                                <img src="../../img/content-btnbg4.png" alt=""> 用户管理
+                            </i>
+                            <ol>
+                                <li>
+                                    <a href="../mine/manage-info.html">个人信息</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/manage-address.html">收货地址</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/manage-buyers.html">常用购票人</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/manage-security.html">安全中心</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/manage-huimin.html">身份认证</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/manage-comments.html">我的评论</a>
+                                </li>
+                                <li id="leftClick" class="active_bg">
+                                    <a href="../mine/manage-take.html">我的订阅</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/manage-advise.html">意见建议</a>
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-right col-md-9 p0">
+                    <div class="tit">
+                        <h5 class="h5 p0">取票地址详情</h5>
+                    </div>
+                    <div class="b-r-cen">
+                        <div style="min-height: 300px; width: 100%;" id="map"> </div>
+                        <div class="city">
+                            <div class="city-t">
+                                <p class="col_a4">已选条件：
+                                    <span id="shiIext"></span>
+                                    <span id="xianText"></span>
+                                </p>
+                            </div>
+                            <div class="city-c">
+                                <span class="col_a4">城市：</span>
+                                <ul id="shi">
+                                    <li>全部</li>
+                                    <li>济南
+                                        <input type="hidden" id="marker" value='[{ title: "名称：山东省会大剧院", point: "117.084682,36.791164", address: "山东省济南市槐荫区腊山河东路与日照路交叉口西170米路北", tel: "0531-66686633" },  { title: "名称：历山剧院", point: "117.15883,36.383797", address: "山东省济南市历下区和平路59号", tel: "0531-86942380" },  { title: "名称：山东话剧院", point: "117.03064,36.656342", address: "山东省济南市历下区解放路115号（近西部酒城）", tel: "0531-86952054" },  { title: "名称：山东歌舞剧院", point: "117.36844,36.691887", address: "山东省济南市历下区杆南东街123号", tel: "0531-86922658" } ,{ title: "名称：青岛大剧院", point: "120.464035,36.293303", address: "青岛市崂山区云岭路5号", tel: "0532-80665555" },  { title: "名称：青岛话剧院", point: "120.382772,36.086359", address: "青岛市市北区临清路12号丙", tel: "0532-82805166" },  { title: "名称：青岛实验剧场", point: "120.677372,36.3185532", address: "青岛市市北区顺兴路26号", tel: "0532-83811166" },  { title: "名称：青岛市歌舞剧院", point: "120.270289,36.264835", address: "青岛市市北区兴安路15号", tel: "0532-82714673" } ]'
+                                            </li>
+                                        <li>青岛</li>
+                                        <li>烟台</li>
+                                        <li>潍坊</li>
+                                        <li>东营</li>
+                                        <li>济南</li>
+                                        <li>青岛</li>
+                                        <li>烟台</li>
+                                        <li>潍坊</li>
+                                        <li>烟台</li>
+                                        <li>潍坊</li>
+                                        <li>东营</li>
+                                        <li>济南</li>
+                                        <li>青岛</li>
+                                        <li>烟台</li>
+                                        <li>潍坊</li>
+                                        <li>东营</li>
+                                        <li>济南</li>
+                                        <li>青岛</li>
+                                        <li>烟台</li>
+                                        <li>潍坊</li>
+                                        <li>东营</li>
+                                </ul>
+                                <ul class="col_97" id="xian">
+                                    <li>全部</li>
+                                    <li>历下区</li>
+                                    <li>历城区</li>
+                                    <li>天桥区</li>
+                                    <li>高新区</li>
+                                    <li>济阳县</li>
+                                    <li>章丘县</li>
+                                </ul>
+                            </div>
+                            <div class="city-b">
+                                <input type="text" placeholder="取票网点">
+                                <a href="###">搜索</a>
+                            </div>
+                        </div>
+                        <div class="searchResult">
+                            <table class="table table-bordered mt30 hidden-xs text-center size14 col_38">
+                                <thead class="bg_f8">
+                                    <tr>
+                                        <th class="city_th text-center">城市</th>
+                                        <th class="text-center">区/县</th>
+                                        <th class="text-center">详细地址</th>
+                                        <th class="text-center">查询电话</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="10" scope="row" class="city_td">济南
+                                        </td>
+                                        <td>历下区</td>
+                                        <td>山东省济南市历下区历山路38-1号山东省京剧院（梨园大戏院）院内南侧平房
+                                            <a href="./manage-takeTickets.html">详细地址</a>
+                                        </td>
+                                        <td>0531-62366169</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>历下区</td>
+                                        <td>山东省济南市历下区历山路38-1号山东省京剧院（梨园大戏院）院内南侧平房
+                                            <a href="./manage-takeTickets.html">详细地址</a>
+                                        </td>
+                                        <td>0531-62366169</td>
+                                    </tr>
+                                    <tr>
+                                        <td>历下区</td>
+                                        <td>山东省济南市历下区历山路38-1号山东省京剧院（梨园大戏院）院内南侧平房
+                                            <a href="./manage-takeTickets.html">详细地址</a>
+                                        </td>
+                                        <td>0531-62366169</td>
+                                    </tr>
+                                    <tr>
+                                        <td>历下区</td>
+                                        <td>山东省济南市历下区历山路38-1号山东省京剧院（梨园大戏院）院内南侧平房
+                                            <a href="./manage-takeTickets.html">详细地址</a>
+                                        </td>
+                                        <td>0531-62366169</td>
+                                    </tr>
+                                    <tr>
+                                        <td>历下区</td>
+                                        <td>山东省济南市历下区历山路38-1号山东省京剧院（梨园大戏院）院内南侧平房
+                                            <a href="./manage-takeTickets.html">详细地址</a>
+                                        </td>
+                                        <td>0531-62366169</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <!-- 分页开始 -->
+                            <div class="page_box hidden-xs pos_rel mb20 p0">
+                                <div class="pos_abs">
+                                    <div class="page overflow inlineb size14">
+                                        <a href="" class="page_btn bg_ff bor_e8 pull-left">
+                                            &lt; 上一页</a>
+                                        <div class="page_num_box inlineb pull-left">
+                                            <a href="" class="page_btn page_num bg_ff bor_e8 pull-left">1</a>
+                                            <a href="" class="page_btn page_num bg_ff bor_e8 pull-left">2</a>
+                                            <a href="" class="page_btn page_num bg_ff bor_e8 pull-left">3</a>
+                                            <a href="" class="page_btn page_num bg_ff bor_e8 pull-left">4</a>
+                                            <a href="" class="page_btn page_num bg_ff bor_e8 pull-left">5</a>
+                                        </div>
+                                        <span class="pull-left">...&nbsp;</span>
+                                        <a href="" class="page_btn bg_ff bor_e8 pull-left">下一页 &gt;</a>
+                                        <div class="pull-left size12 lineHei36 col_97 mlr10">共24页，到第</div>
+                                        <input type="number" class="pull-left bor_e8 page_int" value="">
+                                        <div class="pull-left size12 lineHei36 col_97 mlr10">页</div>
+                                        <input type="submit" value="确定" class="page_sub bg_ff bor_e8 size12 page_int">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 分页结束 -->
+                        </div>
+
+                    </div>
+                </div>
+                <!-- 主体结束 -->
+                <!-- 主体结束 -->
+            </div>
+        </div>
+        <script src="../../js/common/fot-commonB.js"></script>
+    </div>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../lib/html5shiv/html5shiv.min.js"></script>
+      <script src="../lib/respond/respond.min.js"></script>
+    <![endif]-->
+    <script src="../../lib/respond/respond.min.js"></script>
+    <script src="../../lib/jquery/jquery.1.9.1.js"></script>
+    <script src="../../lib/bootstrap/bootstrap.js"></script>
+    <script src="../../lib/idangerouSwiper/idangerous.swiper.min.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/yuanxian-introduced.js"></script>
+    <script>
+        // 市、区选择
+        $.each($('#shi').children(), function (index, item) {
+            $(item).on("click", function () {
+                $(this).css({ "background": "red", "color": "#fff" }).siblings().css({ "background": "none", "color": "#000" });
+                $("#shiIext").css({ "padding": "2px 12px", "border": "1px dashed red" }).text($(this).text());
+                $("#xianText").css({ "padding": "0px", "border": "0px dashed red" }).text("");
+                $('#xian').children().css({ "background": "none", "color": "#a4a4a4" });
+                getAjax($("#marker").val())
+                
+            })
+        })
+        $.each($('#xian').children(), function (index, item) {
+            $(item).on("click", function () {
+                $(this).css({ "background": "red", "color": "#fff" }).siblings().css({ "background": "none", "color": "#a4a4a4" });
+                $("#xianText").css({ "padding": "2px 12px", "border": "1px dashed red" }).text($(this).text());
+
+            })
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>惠民认证</title>
+    <link rel="stylesheet" href="../../lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../../lib/idangerouSwiper/idangerous.swiper.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/mine/manage-huimin.css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+    <div class="container-fluid wrap p0">
+        <script src="../../js/common/fot-common.js"></script>
+        <!-- 主体 -->
+        <div id="content_showhuimin" class="bg_f9 col-xs-12 p0">
+            <div class="container box p0">
+                <!-- 主体开始 -->
+                <!-- 主体开始 -->
+                <div class="box-left col-md-2 p0">
+                    <ul>
+                        <li>
+                            <img src="../../img/content-btnbg4.png" alt="">
+                            <!-- <a href="../mine/order-recen.html"></a> -->
+                            <strong>我的艺票通</strong>
+                        </li>
+                        <li>
+                            <i class="line">
+                                <a href="../mine/order-recen.html" style="width:200px">订单中心</a>
+                            </i>
+                            <ol>
+                                <li>
+                                    <a href="../mine/order-mineRecen.html">我的订单</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/order-wallet.html">电子钱包</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/order-coupons.html">我的优惠券</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/order-integral.html">我的积分</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/order-register.html">预定登记</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/order-attention.html">我的关注</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <i class="line">
+                                <img src="../../img/content-btnbg4.png" alt=""> 用户管理
+                            </i>
+                            <ol>
+                                <li>
+                                    <a href="../mine/manage-info.html">个人信息</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/manage-address.html">收货地址</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/manage-buyers.html">常用购票人</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/manage-security.html">安全中心</a>
+                                </li>
+                                <li id="leftClick" class="active_bg">
+                                    <a href="../mine/manage-huimin.html">身份认证</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/manage-comments.html">我的评论</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/manage-take.html">我的订阅</a>
+                                </li>
+                                <li>
+                                    <a href="../mine/manage-advise.html">意见建议</a>
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-right col-md-9 p0">
+                    <div class="tit">
+                        <h5 class="h5 p0">身份认证</h5>
+                        <i>信息提交完成后，用户可访问惠民演出页面选择相应演出场次进行惠民在线座位预定</i>
+                    </div>
+                    <div class="b-r-cen">
+                        <div class="huimin">
+                            <div>
+                                <h5 class="h5">惠民认证</h5>
+                            </div>
+                            <p>为了您惠民票购买，请验证身份！</p>
+                            <form action="">
+                                <label for="">
+                                    &nbsp;&nbsp;
+                                    <i>*</i>真实姓名：
+                                    <input type="text" name="" id="">
+                                    <!-- <span>请填写真实姓名</span> -->
+                                </label>
+                                <label for="">
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    <i>*</i>性别：
+                                    <input type="radio" name="sex" id="">男
+                                    <input type="radio" name="sex" id="">女
+                                    <input type="radio" name="sex" id="" checked>保密
+                                </label>
+                                <label for="">
+                                    &nbsp;&nbsp;
+                                    <i>*</i>出生日期：
+                                    <input type="date" name="" id="">
+                                    <!-- <span>请填写真实姓名</span> -->
+                                </label>
+                                <label for="">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <i>*</i>居住地：
+                                    <div id="province"></div>
+                                </label>
+                                <label for="">
+                                    &nbsp;&nbsp;
+                                    <i>*</i>详细地址：
+                                    <input type="text" name="" id="">
+                                </label>
+                                <label for="">
+                                    &nbsp;&nbsp;
+                                    <i>*</i>证件类型：
+                                    <select name="" id="">
+                                        <option value="">身份证</option>
+                                        <option value="">驾驶证</option>
+                                    </select>
+                                </label>
+                                <label for="">
+                                    &nbsp;&nbsp;
+                                    <i>*</i>证件证号：
+                                    <input type="text" name="" id="">
+                                </label>
+
+                                <label for="">
+                                    &nbsp;&nbsp;
+                                    <i>*</i>身份证明：
+                                    <div class="huiminImgBox">
+                                        <input type="file" name="" id="fileImg1" class="fileImg" onchange="imgPreview(this)">
+                                        <img src="" alt="" id="preview">
+                                        <span class="clear">×</span>
+                                    </div>
+                                    <div class="huiminImgBox">
+                                        <input type="file" name="" id="fileImg2" class="fileImg" onchange="imgPreview1(this)">
+                                        <img src="" alt="" id="preview1">
+                                        <span class="clear1">×</span>                    
+                                    </div>
+                                </label>
+
+
+
+                            </form>
+                            <a href="###" class="save">保存</a>
+
+                            <!-- </div> -->
+
+                        </div>
+                    </div>
+                </div>
+                <!-- 主体结束 -->
+                <!-- 主体结束 -->
+            </div>
+        </div>
+        <script src="../../js/common/fot-commonB.js"></script>
+    </div>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../lib/html5shiv/html5shiv.min.js"></script>
+      <script src="../lib/respond/respond.min.js"></script>
+    <![endif]-->
+    <script src="../../lib/respond/respond.min.js"></script>
+    <script src="../../lib/jquery/jquery.1.9.1.js"></script>
+    <script src="../../lib/bootstrap/bootstrap.js"></script>
+    <script src="../../lib/idangerouSwiper/idangerous.swiper.min.js"></script>
+
+    <script src="../../lib/h-ui/jquery.provincesCity.js"></script>
+    <script src="../../lib/h-ui/provincesData.js"></script>
+    <script src="../../js/main.js"></script>
+    <script>
+
+
+        // 上传图片
+        function imgPreview(fileDom) {
+            //判断是否支持FileReader
+            if (window.FileReader) {
+                var reader = new FileReader();
+            } else {
+                alert("您的设备不支持图片预览功能，如需该功能请升级您的设备！");
+            }
+
+            //获取文件
+            var file = fileDom.files[0];
+            var imageType = /^image\//;
+            //是否是图片
+            if (!imageType.test(file.type)) {
+                alert("请选择图片！");
+                return;
+            }
+            // if (file.size > 1000 * 4) {
+            //     alert("图片大小不得超过4M");
+            //     return;
+            // }
+            //读取完成
+            reader.onload = function (e) {
+                console.log(e)
+                //获取图片dom
+                var img = document.getElementById("preview");
+                //图片路径设置为读取的图片
+                img.src = e.target.result;
+                img.style.width = "120px";
+                img.style.height = "90px";
+                $(".clear").addClass("show");
+            };
+            reader.readAsDataURL(file);
+        }
+        function imgPreview1(fileDom) {
+            //判断是否支持FileReader
+            if (window.FileReader) {
+                var reader = new FileReader();
+            } else {
+                alert("您的设备不支持图片预览功能，如需该功能请升级您的设备！");
+            }
+
+            //获取文件
+            var file = fileDom.files[0];
+            var imageType = /^image\//;
+            //是否是图片
+            if (!imageType.test(file.type)) {
+                alert("请选择图片！");
+                return;
+            }
+            // if (file.size > 1000 * 4) {
+            //     alert("图片大小不得超过4M");
+            //     return;
+            // }
+            //读取完成
+            reader.onload = function (e) {
+                console.log(e)
+                //获取图片dom
+                var img = document.getElementById("preview1");
+                //图片路径设置为读取的图片
+                img.src = e.target.result;
+                img.style.width = "120px";
+                img.style.height = "90px";
+                $(".clear1").addClass("show");
+            };
+            reader.readAsDataURL(file);
+        }
+        // ×
+        $(".clear").on("click", function(){
+            $("#preview").attr("src","").css({"width":"0","height":"0"});
+            $(".clear").removeClass("show");            
+        })
+        $(".clear1").on("click", function(){
+            $("#preview1").attr("src","").css({"width":"0","height":"0"});
+            $(".clear1").removeClass("show");
+        })
+    </script>
+</body>
+
+</html>

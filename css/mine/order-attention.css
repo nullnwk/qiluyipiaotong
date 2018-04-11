@@ -1,0 +1,122 @@
+ .box-right{
+    /* height: 800px; */
+    width: 968px;
+}
+
+.tit{
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 25px;
+    background-color: #fff;
+}
+.tit h5{ 
+    height: 41px;
+    line-height: 41px;
+    margin-right: 15px;
+    font-size: 14px;
+    margin: 0;
+}
+.tit span{
+    font-size: 12px;
+    color:#727272; 
+}
+
+
+
+
+
+ .b-r-cen{
+    width: 100%;
+    /* height: 528px; */
+    background-color: #fff;
+    margin:20px 0;
+    padding: 20px 30px;
+ }
+ .b-r-cen a{
+    display: inline-block;
+    color:#000;
+    padding: 0 6px;
+    font-size: 14px;
+    border-radius: 2px;
+}
+.b-r-cen a:hover{
+    color:#fff;
+    background-color: red;
+}
+.b-r-cen .line1{
+    margin: 0 3px;
+}
+.b-r-c-t{
+    border-bottom: .5px solid #ccc;
+    padding-bottom: 10px;
+}
+.b-r-c-b img{
+    float: left;
+    margin-right: 20px;
+}
+.b-r-c-b a, .b-r-c-b i, .b-r-c-b strong{
+    display: inline-block;
+}
+.b-r-c-b ul li{
+    position: relative;
+    border-bottom: .5px solid #ccc;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+.b-r-c-b li .musicTit{
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    text-indent: -8px;;
+}
+.b-r-c-b li p{
+    color: #747474;
+    font-size: 14px;
+    margin: 6px 0;
+}
+.b-r-c-b li p strong{
+    color: #FD4340;
+    font-size: 20px;
+    font-weight: normal;
+}
+.b-r-c-b li .seat{
+    margin-top: 20px;
+}
+.b-r-c-b li .seat span:first-child{
+    padding-left:17px;
+    font-size: 12px;
+    background-image: url("../../img/qiluyipt_10.png");
+    background-position:0;
+}
+.b-r-c-b li .seat span:last-child{
+    padding-left:17px;
+    margin-left: 20px;
+    font-size: 12px;
+    background-image: url("../../img/qiluyipt_18.png");
+    background-position:0;
+}
+
+.b-r-c-b li .cancel{
+    position: absolute;
+    right: 34px;
+    top: 28px;
+    color: #4B7DB5;
+    font-size: 12px;
+}
+.b-r-c-b li .cancel:hover{
+    color: #4B7DB5;
+    font-size: 12px;
+    background-color: #fff;
+}
+.b-r-c-b li .buy{
+    position: absolute;
+    right: 26px;
+    bottom:17px;
+    color: #fff;
+    background-color: red;
+    border-radius: 2px;
+    padding:5px 12px;
+    font-size: 14px;
+}

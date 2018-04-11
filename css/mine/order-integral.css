@@ -1,0 +1,126 @@
+
+ .box-right{
+    /* height: 600px; */
+    width: 968px;
+}
+
+.tit{
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 25px;
+    background-color: #fff;
+}
+.tit h5{ 
+    height: 41px;
+    line-height: 41px;
+    font-size: 14px;
+    margin: 0;
+}
+.tit h5, .tit span, .tit a{
+    display: inline-block;
+}
+.tit span{
+    margin-left: 15px;
+    font-size: 11px;    
+}
+.tit a{
+    color: #3F82CF;
+    font-size: 11px;        
+}
+ .b-r-cen{
+    width: 100%;
+    /* height: 528px; */
+    background-color: #fff;
+    margin:20px 0;
+    padding: 20px 30px;
+ }
+ .b-r-cen i{
+    display: inline-block;
+    color: red;
+}
+ .b-r-c-icon{
+     width: 100%;
+     height: 50px;
+     background-color: aliceblue;
+     margin-bottom: 40px;
+ } 
+ 
+ .order-num{
+    font-size: 12px;
+    margin-bottom: 20px;
+ }
+ .order-num span{
+     float: right;
+     margin-right: 40px;
+ }
+ 
+ .order-num p:nth-child(2){
+    font-size: 11px;
+ }
+
+ .integral>div{
+    height: 40px;
+     border-bottom: 1px solid #EAEAEA;
+ }
+ .integral h5{
+     display: inline-block;
+     padding: 5px 15px;
+     height: 30px;
+     cursor: pointer;
+ }
+ .integral h5:first-child{
+     border: 1px solid #EAEAEA;
+     border-bottom: 1px solid #fff;
+     color: red;
+ }
+ .integral span{
+     float: right;
+     font-size: 12px;
+    margin-top: 16px;
+     margin-right: 30px;
+ }
+ .integral table{
+     font-size: 12px;
+     margin-top: 20px;
+     text-align: center;
+ }
+ .integral table tr:first-child td{
+     color: #A1A1A1;
+     background-color: #FCFCFC;
+ }
+ .integral a{
+    color: #3F82CF;
+    font-size: 11px; 
+    float: right;
+    margin-right: 20px;
+    margin-top: -12px;       
+}
+/* order-register */
+.integral .register{
+    /* width: 968px; */
+    font-size: 12px;
+    margin-top: -10px;
+    /* margin-left: -30px; */
+    text-align: center;
+}
+.integral .register tr td{
+    background-color: #fff;
+    height: 32px;
+    line-height: 32px;
+    
+}
+.integral .register tr:first-child td{
+    color: #000;
+    background-color: #FCFCFC;
+}
+.integral .register a{
+   color: #3F82CF;
+   font-size: 11px; 
+   margin-top: 0px;
+   float: none;
+   display: inline-block;
+}
+.integral .register a:hover{
+    color: red;
+ }

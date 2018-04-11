@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>公司简介</title>
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../lib/idangerouSwiper/idangerous.swiper.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/registered.css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../css/tpl_list_new.css" rel="stylesheet" type="text/css">
+    <style>
+        .m-crumb {
+            /* margin-left: 72px; */
+            height: 4.0rem;
+            text-align: left;
+            line-height: 5.0rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 表单 -->
+    <div class="register">
+        <form action="">
+            <div class="form-tel">
+                <input type="text" name="" id="tel" class="form-reg" placeholder="请输入手机号码">
+            </div>
+            <div class="form-tel">
+                <input type="text" name="" id="pass" class="form-reg" placeholder="登录密码">
+            </div>
+            <input type="file" name="" id="FileUpload">
+            <a href="####" class="form-a" style="color:#fff" id="zhuce">立即注册</a>
+        </form>
+
+    </div>
+
+    <!-- <form enctype="multipart/form-data" id="uploadForm">
+        <input type="file" name="uploadFile" id="upload_file" style="margin-bottom:10px;">
+        <input type="button" id="uploadPicButton" value="上传" onclick="uploadPic()">
+    </form> -->
+
+    <script src="../lib/jquery/jquery.1.9.1.js"></script>
+    <script src="../lib/bootstrap/bootstrap.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+
+
+
+        // 获取次卡
+        let searchLogin = window.location.search.substr(1);
+        $("#zhuce").on("click", function () {
+            console.log(searchLogin)
+
+            let j = {
+                ssid: searchLogin,
+                // ssid: "33CFD078165BBE6F04658410EDDDB059",
+                // detail:"济南市啊啊啊",
+                // name:"niu",
+                // phone:"18554639712",
+                // id:"526d8723c9866c8123c17991d6ecedec"   //新闻动态
+                // id:"2c982bbf627602bb016279c88729001f"      //政策法规
+                // id:"2c982bbf6285b8d2016285c2ba9c0005"      //通知公告
+                // state:"0"
+                // 优惠券
+                // phone:"18554639712"
+                //收藏
+                // proId:"7A954A0DB7D7EB709BF0EA54C81FB041",
+                // type:"1"
+                // code:"592160155978829824"
+                // state: "2"
+                // name:"大"
+                // file:""
+                // pid:"2c982bbf62518657016251a771120006"
+            }
+            $.ajax({
+                url: "http://39.104.111.170/yptcms/web/muserrevaddress/queryMuserRevaddressById.wo",
+                // url: "http://192.168.1.163:8080/yptcms/web/yptproject/query.wo",
+                data: j,
+                type: "post",
+                dataType: "json",
+                cache: false,
+                success: function (res) {
+                    console.log(j)
+                    console.log(res);
+                    let search = window.location.pathname;
+                    searchLogin = "";
+                    console.log(search);
+                    if (res.statusCode == 300) {
+                        window.location.href = `./login.html?${search}`;
+                    }
+                },
+                error: function (err) {
+                    // console.log(j);
+                    console.log("错误");
+                }
+            })
+        })
+
+            // 
+    </script>
+</body>
+
+</html>

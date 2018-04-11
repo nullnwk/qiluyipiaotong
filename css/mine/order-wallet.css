@@ -1,0 +1,195 @@
+/* 左侧共用 在main中 */
+/* 主体右侧 */
+.box-right{
+    /* background: #999; */
+    /* height: 200px; */
+    width: 968px;
+}
+
+.tit{
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 25px;
+    background-color: #fff;
+
+}
+.tit h5,.tit i, .tit a,.b-r-content h5, .b-r-content a{
+    display: inline-block;
+}
+.tit h5{
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.tit i, .tit a{
+    font-size: 12px;
+}
+.tit a{
+    color: #65B6E3
+}
+.b-r-content{
+    margin:20px 0;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    background-color: #fff;
+}
+.b-r-content a{
+    height: 30px;
+    line-height: 30px;
+    padding: 0 20px;
+    margin-left: 20px;
+    font-size: 14px;
+    border-radius: 3px;
+    background-color: red;
+    color: #fff;
+}
+
+.b-r-pay{
+    margin:20px 0;
+    height: 140px;
+    background-color: #fff;
+    
+}
+.b-r-pay .brp-l1,.b-r-pay .brp-l2, .b-r-pay .brp-r1, .b-r-pay .brp-r2{
+    width: 230px;
+    height: 140px;
+    border-right:1px dashed #E9E9E9;
+    float: left;
+}
+.b-r-pay .brp-l1{
+    width: 250px;
+}
+.brp-l1 .brp-icon{
+    width: 80px;
+    height: 80px;
+    border: 1px solid red;
+    border-radius: 50%;
+    float: left;
+    margin: 30px 20px 30px 40px; 
+    box-sizing: border-box;
+}
+.brp-l1 span{
+    display: inline-block;
+    margin-top: 35px;
+    font-size: 14px;    
+}
+.brp-l1 i{
+    color: #BCBCBC;
+    font-size: 12px;
+}
+.brp-l1 a{
+    color: #65B6E3;
+    font-size: 12px;
+}
+.b-r-pay .brp-l2{
+    width: 210px;
+    text-align: center;
+    padding-top: 30px;
+}
+.b-r-pay .brp-l2 i{
+    font-size: 16px;
+    color: red;
+}
+.b-r-pay .brp-r1{
+    width: 210px;
+    text-align: center;
+    padding-top: 22px;
+}
+.brp-r1 p{
+    padding-bottom: 2px;
+    font-size: 12px;
+}
+.brp-r1 i{
+    display: inline-block;
+    color: red;
+}
+.brp-r1 a{
+    width: 110px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 56px;
+    background-color: #D7D7D7;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 3px;
+}
+.brp-r1 a:hover{
+    background-color: red;
+}
+.b-r-pay .brp-r2{
+    width: 260px;
+    padding: 12px 0 0 20px;
+    border-right: none;
+}
+.brp-r2 p, .brp-r2 i, .brp-r2 a, .brp-r2 span{
+    display: inline-block;
+    font-size: 12px;
+}
+.brp-r2 .pass{
+    width: 200px;
+    height:16px;
+    border-radius: 20px;
+    background-color: #ddd;
+}
+.brp-r2 a{
+   color: #65B6E3
+}
+.brp-r2 i{
+    margin-right: 20px;
+    color: #D0DF8A;
+ }
+
+ .b-r-Payments{
+     width: 100%;
+     height: 268px;
+     background-color: #fff;
+ }
+ .b-r-Payments .b-r-paymT{
+     width: 100%;
+     height: 33px;
+    border-bottom: 1px solid #DCDCDC;
+ }
+ .b-r-Payments h5{
+     display: inline-block;
+     margin-left: 20px;
+     padding-left: 10px;
+     font-size: 12px;
+     font-weight: bold;
+     padding-bottom: 9px;     
+ }
+ .b-r-paymT h5:hover{
+     cursor: pointer;
+     border-bottom: 1px solid red;
+ }
+ .b-r-Payments span{
+     float: right;
+     margin-top: 10px;
+     margin-right: 40px;
+     cursor: pointer;
+ }
+ .b-r-paymB{
+     position: relative;
+     height: 235px;
+ }
+ .b-r-paymB>div{
+    height: 235px;
+    line-height: 235px;
+    text-align: center;     
+ }
+ .b-r-paymB>div p{
+    font-size: 14px;
+    color: #828282;   
+ }
+ .b-r-paymB>p{
+     color: #A9A9A9;
+     position: absolute;
+     left: 20px;
+     bottom: 12px;
+ }
+ .b-r-paymB table{
+    width: 930px;
+    margin: 0 20px;
+    font-size: 12px;
+ }

@@ -1,0 +1,249 @@
+
+ .box-right{
+    /* height: 600px; */
+    width: 968px;
+}
+
+.tit{
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 25px;
+    background-color: #fff;
+}
+.tit h5{ 
+    height: 41px;
+    line-height: 41px;
+    font-size: 14px;
+    margin: 0;
+}
+.tit h5, .tit span, .tit a{
+    display: inline-block;
+}
+.tit span{
+    margin-left: 15px;
+    font-size: 11px;    
+}
+.tit a{
+    color: #3F82CF;
+    font-size: 11px;        
+}
+ .b-r-cen{
+    width: 100%;
+    /* height: 577px; */
+    background-color: #fff;
+    margin:20px 0;
+    padding: 20px 30px;
+ }
+ .b-r-cen i{
+    display: inline-block;
+    color: red;
+}
+ .b-r-c-icon{
+     width: 100%;
+     height: 50px;
+     background-color: aliceblue;
+     margin-bottom: 40px;
+ } 
+ 
+ .order-num{
+    font-size: 12px;
+    margin-bottom: 20px;
+ }
+ .order-num span{
+     float: right;
+     margin-right: 40px;
+ }
+ 
+ .order-num p:nth-child(2){
+    font-size: 11px;
+ }
+
+ .info .info-t{
+    height: 40px;
+    border-bottom: 1px solid #EAEAEA;
+ }
+ .info h5{
+     display: inline-block;
+     padding: 5px 15px;
+     height: 30px;
+     cursor: pointer;
+ }
+ .info h5:first-child{
+     border: 1px solid #EAEAEA;
+     border-bottom: 1px solid #fff;
+     color: red;
+ }
+ .info span{
+     float: right;
+     font-size: 12px;
+     margin-top: 12px;
+     margin-right: 30px;
+ }
+ .info span i{
+    font-size: 16px;
+}
+.info p{
+    margin: 20px 0;
+    color: #FF7948;
+}
+.info form label{
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    margin:20px 0 20px 50px;;
+}
+.info form label input,.info form label select{
+    width: 250px;
+    height: 35px;
+    border:1px solid #F2F2F2;
+    text-indent: 10px;
+}
+.info form label input[type=radio]{
+    width: 20px;
+    height: 35px;
+    border:1px solid #F2F2F2;
+}
+.info form label i{
+    display: inline-block;
+    color: red;
+    position: relative;
+    top: 3px;
+    left: 0;
+}
+.info form label a{
+    display: inline-block;
+    color: #4A83C8;
+}
+.info>a{
+    padding: 2px 15px;
+    background-color: red;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 115px;
+    border-radius: 2px;
+}
+.yanchu{
+    margin: 10px 0 20px 65px;
+}
+.option{
+    /* border: 2px solid #fa483c; */
+    padding: 3px 7px;
+}
+.option.selected {
+    border: 1px solid #fa483c;
+    padding: 3px 7px;
+}
+
+#province{
+    display: inline-block;
+}
+#province select{
+    width: 100px;
+    margin-right: 10px;
+}
+
+
+/* 头像设置 */
+.head{
+    margin-top: 20px;
+    overflow: hidden;
+}
+.head-l{
+    width: 490px;
+    overflow: hidden;
+    border-right: .3px solid #ccc;
+    float: left;
+}
+.head-l .fileImg{
+    position: relative;
+    width: 0px;
+}
+.head-l .fileImg::after{
+    content: "选择您要上传的头像";
+    display: inline-block;
+    width: 160px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    border:0.3px solid #ccc;
+    overflow: hidden;
+    /* border-radius: 2px; */
+}
+.head-l .fileImg:hover::after{
+    background-color: #F9F9F9;
+}
+.head-l p, .head-r p{
+    color: #AAAAAA;
+    margin: 20px 0 10px 0;
+    font-size: 12px;
+}
+.head-l .file-display{
+    width: 470px;
+    height: 226px;
+    line-height: 226px;
+    background-color: #F9F9F9;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.head-l strong,.head-r strong{
+    font-size: 12px;
+}
+.head-l ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.head-l ul li{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    margin:10px 10px 0 0;
+}
+.basic .save, .head-l .save, .head-l .cancel{
+    margin: 10px 10px 0 0;
+    padding: 3px 16px;
+    float: left;
+    background-color: red;
+    color: #fff;
+    font-size: 12px;
+    border:.3px solid #ccc;
+    /* border-radius: 2px; */
+}
+.basic .save{
+    margin: -12px 4px 0 115px;
+    
+}
+
+.head-l .cancel{
+    background-color: #fff;
+    color: #000;
+}
+.head-r{
+    width: 360px;
+    float: left;
+    margin-left: 20px;
+}
+.head-r p{
+    margin: 12px 0;
+}
+.head-r .yibai, .head-r .wushi{
+    width: 100px;
+    height: 100px;
+    background-color: #EAEAEA;
+    border: 1px solid #EAEAEA;
+    overflow: hidden;
+}
+.head-r .wushi{
+    width: 50px;
+    height: 50px;
+}
+.head-r i{
+    margin-bottom:20px;
+    color: #A2A2A2; 
+}

@@ -1,0 +1,147 @@
+/* 左侧共用 在main中 */
+/* 主体右侧 */
+.box-right{
+    /* background: #999; */
+    /* height: 200px; */
+    width: 968px;
+}
+
+
+.tit{
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 25px;
+    background-color: #fff;
+}
+.tit h5{ 
+    height: 41px;
+    line-height: 41px;
+    font-size: 14px;
+    margin: 0;
+}
+.tit h5, .tit span, .tit a{
+    display: inline-block;
+}
+.tit span{
+    margin-left: 15px;
+    font-size: 11px;    
+}
+.tit i{
+    display: inline-block;  
+}
+ 
+ .recen, .groom{
+    width: 100%;
+    /* height: 416px; */
+    background-color: #fff;
+    padding: 10px 20px;
+    overflow: hidden;
+   margin: 20px 0;
+    
+}
+
+.recen-tit{
+    background-color: #F5F5F5;
+    font-size: 11px;
+    padding: 5px 10px;
+}
+.recen-tit a{
+    display: inline-block;
+}
+.recen-tit a:nth-child(-n+2){
+    margin-right: 222PX;
+}
+.recen-tit a:nth-last-child(-n+3){
+    margin-right: 80PX;
+}
+.recen-tit a:last-child{
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+
+.recen ul{
+   margin-bottom: 20px;
+}
+.recen li{
+    height: 134px;
+    font-size: 14px;
+   border: 1px solid #e8e8e8; 
+   margin-top: 15px;
+   position: relative;
+}
+
+.recen .recen-c-t h6, .recen .recen-c-t i{
+    display: inline-block;
+    padding-left:10px;
+}
+
+.recen .recen-c-t{
+    height: 30px;
+    line-height: 30px;
+    background-color: #FDFDFD;
+}
+
+.recen .recen-c-t h6{
+    padding-left:10px;
+}
+.recen .recen-c-t i{
+    float: right;
+    font-size: 12px;
+    margin-top: 2px;
+}
+.recen .recen-c-t i:first-child{
+    margin-right: 50px;
+}
+
+
+.recen .recen-c-b{
+    border-top: 1px solid #e8e8e8;
+    padding: 0 10px;
+}
+
+
+.recen li  .recen-c-b>img{
+    float: left;
+   /* width: 200px; */
+   vertical-align: top;
+   padding-top: 10px;   
+}
+
+.recen li  .recen-c-b>p{
+    /* margin-left: 115px; */
+    padding-top: 10px;
+    font-size: 12px;
+    /* display: inline-block; */
+    float: left;
+    text-align: center;
+    margin-right: 53px;
+}
+.recen li  .recen-c-b>p:nth-last-child(-n+3){
+    width: 126px;
+    height: 100px;
+    text-align: center;
+    margin-right: 0;
+   border-left:1px solid #e8e8e8;
+}
+.recen li  .recen-c-b>p.name{
+    margin-right: 0;
+    margin-left: 10px;   
+    width: 260px;
+    text-align: left;
+}
+.money{
+    display: inline-block;
+}
+.recen li  .recen-c-b>p:last-child{
+    margin-right: 0;    
+}
+
+.recen li .dianzan i{
+    display: inline-block;
+    font-size: 11px;
+    margin-right: 10px;
+    padding-left: 20px;
+    color: #A5A5A5;
+}

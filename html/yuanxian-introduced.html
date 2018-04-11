@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>院线介绍</title>
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../lib/idangerouSwiper/idangerous.swiper.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../css/tpl_list_new.css" rel="stylesheet">
+
+    <style type="text/css">
+        img {
+            max-width: none
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container-fluid wrap p0">
+        <script src="../js/common/common.js"></script>
+
+        <!-- 顶部导航开始 -->
+        <!-- <div id="headNav" class="bg_f5 col_67 hidden-xs row bor_b_e3 hi">
+            <div class="container size12">
+                <div class="row">
+                    <div class="pull-left">HI , 欢迎来齐鲁艺票通</div>
+                    <div class="pull-left">[
+                        <a href="login.html" class="inlineb login_a col_red">登陆</a>
+                        <a href="signup.html" class="inlineb col_67">注册</a> ]
+                    </div>
+                    <div class="pull-left ml3">
+                        <span class="verticalBar">|</span>我的艺票通
+                        <img src="../img/dropDown.png" class="my_dropdown_i" alt="">
+                        <span class="verticalBar">|</span>
+                    </div>
+                    <div class="pull-left ml3">我的订单</div>
+                    <div class="pull-right">
+                        <div class="pull-left">齐鲁艺票通微信</div>
+                        <span class="pull-left verticalBar">|</span>
+                        <div class="pull-left">手机版</div>
+                        <span class="pull-left verticalBar">|</span>
+                        <div class="pull-left">客户服务
+                            <img src="../img/dropDown.png" class="my_dropdown_i" alt="">
+                        </div>
+                        <span class="pull-left verticalBar">|</span>
+                        <div class="pull-left">网站导航
+                            <img src="../img/dropDown.png" class="my_dropdown_i" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- 顶部导航结束 -->
+        <!-- 顶部搜索开始 -->
+        <!-- <div id="headSearch" class="col_67 row">
+            <div class="container size12">
+                <div class="row bg_ff">
+                    <div class="col-md-3 overflow hidden-xs p0">
+                        <div class="pull-left col-xs-8 col-md-12 col-md-offset-0">
+                            <img src="../img/logo.png" alt="" id="logo" class="pull-left col-xs-6 hidden-xs p0">
+                            <img src="../img/logo2.png" alt="" id="logo" class="pull-left col-xs-8 hidden-lg p0">
+                            <div class="pull-left location">
+                                <img src="../img/location.png" alt="">
+                                <span class="col_71">济南</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="col-md-12 p-b10-xs row">
+                            <div class="inputBox pull-right col-xs-12 p0">
+                                <div class="col-xs-1 p0">
+                                    <img src="../img/glass.png" class="p0 glass" alt="">
+                                </div>
+                                <div class="col-xs-9 p0">
+                                    <input type="text" class="col-xs-12 size11-xs p0" placeholder="请输入演出/艺人/场馆名称">
+                                </div>
+                                <div class="col-xs-2 bg_red col_ff pull-right text-center size17 p0 searchBtn">搜索</div>
+                                <div class="row hidden-xs">
+                                    <ul class="recommend overflow">
+                                        <li class="pull-left">
+                                            <a href="#" class="col_b4">儿童剧</a>
+                                        </li>
+                                        <li class="pull-left">
+                                            <a href="#" class="col_b4">音乐会</a>
+                                        </li>
+                                        <li class="pull-left">
+                                            <a href="#" class="col_b4">皇家马戏杂技</a>
+                                        </li>
+                                        <li class="pull-left">
+                                            <a href="#" class="col_b4">历山艺享汇</a>
+                                        </li>
+                                        <li class="pull-left">
+                                            <a href="#" class="col_b4">张尊莲</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 size13 phone hidden-xs text-right col_67">
+                        <div class="row">咨询热线：400-0099-566</div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- 顶部搜索结束 -->
+        <!-- 主导航开始 -->
+        <!-- <div class="col-xs-12 bg_ff bor_b_e3">
+            <div class="container p0">
+                <div id="mainNav" class="clearfix">
+                    <ul class="col-md-7 text-center p0 size16 hidden-xs">
+                        <li class="col-md-2">
+                            <a href="#" class="">首页</a>
+                        </li>
+                        <li class="col-md-2" id="playInfo">
+                            <a href="#" class="col_00">演出信息
+                                <img src="../img/dropDown.png" alt="">
+                            </a>
+                            <ul class="overflow size14 pos_abs col_00 container hidden-xs p0 bg_ff">
+                                <li>
+                                    <a href="" class="text-center col-md-12">
+                                        <img src="../img/nav_i1.png" class="nav_i_a" alt="">
+                                        <img src="../img/nav_i1a.png" alt="" class="nav_i_b">
+                                        <div>话剧歌剧</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="text-center col-md-12">
+                                        <img src="../img/nav_i2.png" class="nav_i_a" alt="">
+                                        <img src="../img/nav_i2a.png" alt="" class="nav_i_b">
+                                        <div>音乐会</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="text-center col-md-12">
+                                        <img src="../img/nav_i3.png" class="nav_i_a" alt="">
+                                        <img src="../img/nav_i3a.png" alt="" class="nav_i_b">
+                                        <div>舞蹈</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="text-center col-md-12">
+                                        <img src="../img/nav_i4.png" class="nav_i_a" alt="">
+                                        <img src="../img/nav_i4a.png" alt="" class="nav_i_b">
+                                        <div>曲艺</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="text-center col-md-12">
+                                        <img src="../img/nav_i5.png" class="nav_i_a" alt="">
+                                        <img src="../img/nav_i5a.png" alt="" class="nav_i_b">
+                                        <div>体育</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="text-center col-md-12">
+                                        <img src="../img/nav_i6.png" class="nav_i_a" alt="">
+                                        <img src="../img/nav_i6a.png" alt="" class="nav_i_b">
+                                        <div>儿童剧</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="col-md-2">
+                            <a href="#" class="col_00">新闻动态</a>
+                        </li>
+                        <li class="col-md-2 pos_rel col_red ">
+                            <a href="#" class="col_00">院线介绍</a>
+                        </li>
+                        <li class="col-md-2">
+                            <a href="#" class="col_00">关于本站</a>
+                        </li>
+                    </ul>
+                    <nav class="navbar navbar-fixed-top hidden-lg navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                                    aria-controls="navbar">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand col-xs-9 p0 size12" href="#">
+                                    <div class="pull-left col-xs-12 col-md-offset-0">
+                                        <img src="../img/logo.png" alt="" id="logo" class="pull-left col-xs-6 hidden-xs p0">
+                                        <img src="../img/logo2.png" alt="" id="logo-xs" class="pull-left col-xs-7 hidden-lg p0">
+                                        <div class="pull-left location">
+                                            <img src="../img/location.png" alt="">
+                                            <span class="col_71">济南</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div id="navbar" class="navbar-collapse bg_f8 collapse">
+                                <ul class="nav navbar-nav size12">
+                                    <li>
+                                        <a href="#">登录</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">注册</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">首页</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">演出信息
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu size12">
+                                            <li>
+                                                <a href="#">话剧歌剧</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">音乐会</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">舞蹈</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">曲艺</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">体育</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">儿童剧</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">新闻动态</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">院线动态</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">关于本站</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="col-md-offset-2 hidden-xs col-md-3">
+                        <div class="row text-right">
+                            <a href="#" class="col-md-5 col-md-offset-2 p0 size22">
+                                <img src="../img/theater.png" alt="">
+                                <b class="col_red">场馆库</b>
+                            </a>
+                            <a href="#" class="col-md-5 col_red p0 size22">
+                                <img src="../img/ticket.png" alt="">
+                                <b class="col_red">惠民票</b>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- 主导航结束 -->
+        <!-- 主体开始 -->
+        <div id="content_showInfo" class="bg_f9 col-xs-12 p0">
+            <div class="container p0">
+                <!-- 地图 -->
+                <div style="min-height: 500px; width: 100%;" id="map"> </div>
+                <!-- 地图 -->
+                <!-- 筛选条件开始 -->
+                <div id="filter" class="bor_e8 overflow bg_ff saix_tj">
+                    <div class="left col-md-9 col-xs-12 p0">
+                        <div id="selected" class="size12 overflow p-tb5-xs bor_b_dash_e3">
+                            <h5 class="size13 col_97 p0 col-md-1 size11-xs pull-left">已选
+                                <span class="hidden-xs">条件</span>：</h5>
+                            <ul class="overflow ml3 col-xs-10 p0 pull-left">
+                                <li class="pull-left">
+                                    <a href="" class="col_red pos_rel size10-xs">
+                                        济南
+                                        <i class="close_i pos_abs size12 col_red">×</i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="city" class="size12 bor_b_dash_e3 section p-tb5-xs">
+                            <h5 class="size14 col_97 size11-xs pull-left">城市：</h5>
+                            <ul class="overflow">
+                                <li class="pull-left">
+                                    <a class="size13 size11-xs" href="javascript:getAjax('');">全部</a>
+                                </li>
+                                <li class="pull-left">
+                                    <!-- <?php  $array = '[{title: "名称：山东省会大剧院", point: "117.084682,36.791164", address: "山东省济南市槐荫区腊山河东路与日照路交叉口西170米路北", tel: "0531-66686633" },  { title: "名称：历山剧院", point: "117.15883,36.383797", address: "山东省济南市历下区和平路59号", tel: "0531-86942380" },  { title: "名称：山东话剧院", point: "117.03064,36.656342", address: "山东省济南市历下区解放路115号（近西部酒城）", tel: "0531-86952054" },  { title: "名称：山东歌舞剧院", point: "117.36844,36.691887", address: "山东省济南市历下区杆南东街123号", tel: "0531-86922658" }]';?> -->
+                                    <a class="active size11-xs" href="javascript:getAjax('济南');">济南</a>
+
+                                    <input type="hidden" id="marker" value='[{ title: "名称：山东省会大剧院", point: "117.084682,36.791164", address: "山东省济南市槐荫区腊山河东路与日照路交叉口西170米路北", tel: "0531-66686633" },  { title: "名称：历山剧院", point: "117.15883,36.383797", address: "山东省济南市历下区和平路59号", tel: "0531-86942380" },  { title: "名称：山东话剧院", point: "117.03064,36.656342", address: "山东省济南市历下区解放路115号（近西部酒城）", tel: "0531-86952054" },  { title: "名称：山东歌舞剧院", point: "117.36844,36.691887", address: "山东省济南市历下区杆南东街123号", tel: "0531-86922658" } ,{ title: "名称：青岛大剧院", point: "120.464035,36.293303", address: "青岛市崂山区云岭路5号", tel: "0532-80665555" },  { title: "名称：青岛话剧院", point: "120.382772,36.086359", address: "青岛市市北区临清路12号丙", tel: "0532-82805166" },  { title: "名称：青岛实验剧场", point: "120.677372,36.3185532", address: "青岛市市北区顺兴路26号", tel: "0532-83811166" },  { title: "名称：青岛市歌舞剧院", point: "120.270289,36.264835", address: "青岛市市北区兴安路15号", tel: "0532-82714673" } ]'
+                                    />
+                                </li>
+                                <li class="pull-left">
+                                    <a class="size13 size11-xs" href="javascript:getAjax('青岛');">青岛</a>
+                                </li>
+                                <li class="pull-left">
+                                    <a class="size13 size11-xs" href="javascript:getAjax('测试');">潍坊</a>
+                                </li>
+                                <li class="pull-left">
+                                    <a class="size13 size11-xs" href="javascript:getAjax('测试');">淄博</a>
+                                </li>
+                                <li class="pull-left">
+                                    <a class="size13 size11-xs" href="javascript:getAjax('测试');">滨州</a>
+                                </li>
+                                <li class="pull-left">
+                                    <a class="size13 size11-xs" href="javascript:getAjax('测试');">日照</a>
+                                </li>
+                                <li class="pull-left">
+                                    <a class="size13 size11-xs" href="javascript:getAjax('测试');">威海</a>
+                                </li>
+                                <li class="pull-left">
+                                    <a class="size13 size11-xs" href="javascript:getAjax('测试');">泰安</a>
+                                </li>
+                                <li class="pull-left">
+                                    <a class="size13 size11-xs" href="javascript:getAjax('测试');">临沂</a>
+                                </li>
+                                <li class="pull-left">
+                                    <a class="size13 size11-xs" href="javascript:getAjax('测试');">莱芜</a>
+                                </li>
+                                <li class="pull-left">
+                                    <a class="size13 size11-xs" href="javascript:getAjax('测试');">菏泽</a>
+                                </li>
+                                <li class="pull-left">
+                                    <a class="size13 size11-xs" href="javascript:getAjax('测试');">枣庄</a>
+                                </li>
+                                <li class="pull-left">
+                                    <a class="size13 size11-xs" href="javascript:getAjax('测试');">烟台</a>
+                                </li>
+                                <li class="pull-left">
+                                    <a class="size13 size11-xs" href="javascript:getAjax('测试');">德州</a>
+                                </li>
+                                <li class="pull-left">
+                                    <a class="size13 size11-xs" href="javascript:getAjax('测试');">东营</a>
+                                </li>
+                                <li class="pull-left">
+                                    <a class="size13 size11-xs" href="javascript:getAjax('测试');">济宁</a>
+                                </li>
+                                <li class="pull-left">
+                                    <a class="size13 size11-xs" href="javascript:getAjax('测试');">聊城</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <!-- <input type="hidden" id="marker"/> -->
+                        <div class="clearfix"></div>
+
+                        <div id="dateInfo" class="size14 section p-tb5-xs ">
+
+                            <div class="sousuo">
+                                <input type="text" placeholder="大剧院" class="date_sous bor_e8">
+                                <input type="submit" class="submit_sousbtn size11-xs bor_none col_ff size16" value="确定">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jinri_tuij right col-md-3 size14 col_67 p0 hidden-xs">
+                        <h5 class="size18 col_30">今日推荐</h5>
+
+                        <img src="../img/poster3.png" class="tuij_juy" alt="">
+                        <div class="jinrituijian_baiot">
+                            <div class="size14 col_ff">山东大剧院
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- 筛选条件结束 -->
+                <!-- 列表及推荐开始 -->
+                <div class="container p0">
+                    <!-- 列表开始 -->
+                    <div class="col-md-9 p0 mb20" id="list">
+                        <div class="bor_e8 bg_ff bor-none-xs header overflow">
+                            <div class="pull-left jians_jguo">共为你搜索出
+                                <span>192</span> 个场</div>
+                            <div class="pull-right size14 hidden-xs col_66">
+                                <div class="pull-left col_67 bor_r_e8">排列方式：&nbsp;</div>
+                                <div class="pull-left classify_i bor_r_e8 bg_fa">
+                                    <img src="../img/class1.png" alt="">
+                                </div>
+                                <div class="pull-left classify_i bg_ff">
+                                    <img src="../img/list.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="yuanxian_lb size14">
+                            <ul class="overflow bg_ff">
+                                <li class="p15 col-md-3 col-xs-12">
+                                    <div class="yuanxjs_poster">
+                                        <a href="">
+                                            <img src="../img/20120807151821693.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="yanc_bt size14">
+                                        <a href="">
+                                            <span>[济南]</span>山东省话剧院
+                                        </a>
+                                    </div>
+                                    <div class="size12 yanchu_dz">
+                                        山东省济南市历下区156号
+                                    </div>
+                                    <div class="size12 jijian_sy">
+                                        [ 即将上演
+                                        <span> 4</span> 场演出 ]
+                                    </div>
+                                </li>
+                                <li class="p15 col-md-3 col-xs-12">
+                                    <div class="yuanxjs_poster">
+                                        <a href="">
+                                            <img src="../img/20111008174117253.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="yanc_bt size14">
+                                        <a href="">
+                                            <span>[济南]</span>山东省话剧院</a>
+                                    </div>
+                                    <div class="size12 yanchu_dz">
+                                        山东省济南市历下区156号
+                                    </div>
+                                    <div class="size12 jijian_sy">
+                                        [ 即将上演
+                                        <span> 4</span> 场演出 ]
+                                    </div>
+                                </li>
+                                <li class="p15 col-md-3 col-xs-12">
+                                    <div class="yuanxjs_poster">
+                                        <a href="">
+                                            <img src="../img/20111012142420628.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="yanc_bt size14">
+                                        <a href="">
+                                            <span>[济南]</span>山东省话剧院</a>
+                                    </div>
+                                    <div class="size12 yanchu_dz">
+                                        山东省济南市历下区156号
+                                    </div>
+                                    <div class="size12 jijian_sy">
+                                        [ 即将上演
+                                        <span> 4</span> 场演出 ]
+                                    </div>
+                                </li>
+                                <li class="p15 col-md-3 col-xs-12">
+                                    <div class="yuanxjs_poster">
+                                        <a href="">
+                                            <img src="../img/20111012155406771.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="yanc_bt size14">
+                                        <a href="">
+                                            <span>[济南]</span>山东省话剧院</a>
+                                    </div>
+                                    <div class="size12 yanchu_dz">
+                                        山东省济南市历下区156号
+                                    </div>
+                                    <div class="size12 jijian_sy">
+                                        [ 即将上演
+                                        <span> 4</span> 场演出 ]
+                                    </div>
+                                </li>
+                                <li class="p15 col-md-3 col-xs-12">
+                                    <div class="yuanxjs_poster">
+                                        <a href="">
+                                            <img src="../img/20120807151821693.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="yanc_bt size14">
+                                        <a href="">
+                                            <span>[济南]</span>山东省话剧院</a>
+                                    </div>
+                                    <div class="size12 yanchu_dz">
+                                        山东省济南市历下区156号
+                                    </div>
+                                    <div class="size12 jijian_sy">
+                                        [ 即将上演
+                                        <span> 4</span> 场演出 ]
+                                    </div>
+                                </li>
+                                <li class="p15 col-md-3 col-xs-12">
+                                    <div class="yuanxjs_poster">
+                                        <a href="">
+                                            <img src="../img/20111008174117253.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="yanc_bt size14">
+                                        <a href="">
+                                            <span>[济南]</span>山东省话剧院</a>
+                                    </div>
+                                    <div class="size12 yanchu_dz">
+                                        山东省济南市历下区156号
+                                    </div>
+                                    <div class="size12 jijian_sy">
+                                        [ 即将上演
+                                        <span> 4</span> 场演出 ]
+                                    </div>
+                                </li>
+                                <li class="p15 col-md-3 col-xs-12">
+                                    <div class="yuanxjs_poster">
+                                        <a href="">
+                                            <img src="../img/20111012142420628.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="yanc_bt size14">
+                                        <a href="">
+                                            <span>[济南]</span>山东省话剧院</a>
+                                    </div>
+                                    <div class="size12 yanchu_dz">
+                                        山东省济南市历下区156号
+                                    </div>
+                                    <div class="size12 jijian_sy">
+                                        [ 即将上演
+                                        <span> 4</span> 场演出 ]
+                                    </div>
+                                </li>
+                                <li class="p15 col-md-3 col-xs-12">
+                                    <div class="yuanxjs_poster">
+                                        <a href="">
+                                            <img src="../img/20111012155406771.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="yanc_bt size14">
+                                        <a href="">
+                                            <span>[济南]</span>山东省话剧院</a>
+                                    </div>
+                                    <div class="size12 yanchu_dz">
+                                        山东省济南市历下区156号
+                                    </div>
+                                    <div class="size12 jijian_sy">
+                                        [ 即将上演
+                                        <span> 4</span> 场演出 ]
+                                    </div>
+                                </li>
+
+
+
+
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- 推荐开始 -->
+                    <div class="col-md-3 hidden-xs p0">
+                        <div class="lineHei40 ml15 bg_ff recommend" id="erxiaospot">
+                            <p class="size18 title">
+                                <i class="verticalBar"></i> 热销推荐
+                                <a href="#" class="pull-right">
+                                    <img src="../img/more.png" alt="">
+                                </a>
+                            </p>
+                            <ul>
+                                <li>
+                                    <a class="rextui_tup overflow bor_b_dash_e8" href="" style="margin: 10px 0;padding: 0px;">
+                                        <img src="../img/20111012155406771.jpg" class=" poster pull-left" alt="">
+                                        <div class="rextui_j pull-left info" style="width: 100%;">
+                                            <h5 class="size14">山东省话剧院</h5>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="overflow bor_b_dash_e8 suolue size14" href="">
+                                        <i class="pull-left bubble text-center col_ff size11">2</i>
+                                        山东省话剧院
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="overflow bor_b_dash_e8 suolue size14" href="">
+                                        <i class="pull-left bubble text-center col_ff size11">2</i>
+                                        山东省话剧院
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="overflow bor_b_dash_e8 suolue size14" href="">
+                                        <i class="pull-left bubble text-center col_ff size11">3</i>
+                                        山东省话剧院
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="overflow bor_b_dash_e8 suolue size14" href="">
+                                        <i class="pull-left bubble text-center col_ff size11">4</i>
+                                        山东省话剧院
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lineHei40 mt30 ml15 bg_ff recommend" id="hotspot">
+                            <p class="size18 title">
+                                <i class="verticalBar"></i> 热门推荐
+                                <a href="#" class="pull-right">
+                                    <img src="../img/more.png" alt="">
+                                </a>
+                            </p>
+                            <ul>
+                                <li>
+                                    <a class="rextui_tup overflow bor_b_dash_e8" href="" style="margin: 10px 0;padding: 0px;">
+                                        <img src="../img/poster2.png" class="poster pull-left" alt="">
+                                        <div class="rextui_j pull-left info" style="width: 100%;">
+                                            <h5 class="size14">百老汇殿堂级原版音乐剧 《魔法坏女巫》（Wicked）</h5>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="overflow bor_b_dash_e8 suolue size14" href="">
+                                        <i class="pull-left bubble text-center col_ff size11">2</i>
+                                        花儿为什么这样红—中国歌坛经典歌曲欢庆“七一”演唱会
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="overflow bor_b_dash_e8 suolue size14" href="">
+                                        <i class="pull-left bubble text-center col_ff size11">3</i>
+                                        花儿为什么这样红—中国歌坛经典歌曲欢庆“七一”演唱会
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="overflow bor_b_dash_e8 suolue size14" href="">
+                                        <i class="pull-left bubble text-center col_ff size11">4</i>
+                                        花儿为什么这样红—中国歌坛经典歌曲欢庆“七一”演唱会
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 推荐结束 -->
+                    <div class="clearfix"></div>
+                    <!-- 分页开始 -->
+                    <div class="container page_box hidden-xs pos_rel mb20 p0">
+                        <div class="pos_abs">
+                            <div class="page overflow inlineb size14">
+                                <a href="" class="page_btn bg_ff bor_e8 pull-left">
+                                    < 上一页</a>
+                                        <div class="page_num_box inlineb pull-left">
+                                            <a href="" class="page_btn active page_num bg_ff bor_e8 pull-left">1</a>
+                                            <a href="" class="page_btn page_num bg_ff bor_e8 pull-left">2</a>
+                                            <a href="" class="page_btn page_num bg_ff bor_e8 pull-left">3</a>
+                                            <a href="" class="page_btn page_num bg_ff bor_e8 pull-left">4</a>
+                                            <a href="" class="page_btn page_num bg_ff bor_e8 pull-left">5</a>
+                                        </div>
+                                        <span class="pull-left">...&nbsp;</span>
+                                        <a href="" class="page_btn bg_ff bor_e8 pull-left">下一页 ></a>
+                                        <div class="pull-left size12 lineHei36 col_97 mlr10">共24页，到第</div>
+                                        <input type="number" class="pull-left bor_e8 page_int" value="">
+                                        <div class="pull-left size12 lineHei36 col_97 mlr10">页</div>
+                                        <input type="submit" value="确定" class="page_sub bg_ff bor_e8 size12 page_int">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 分页结束 -->
+                    <!-- 列表结束 -->
+                </div>
+                <!-- 列表及推荐结束 -->
+            </div>
+        </div>
+        <!-- 主体结束 -->
+        <!-- 指南开始 -->
+        <script src="../js/common/commonB.js"></script>
+
+
+        <!-- <div class="col-xs-12 hidden-xs p0 p_t30 clearfix">
+            <div class="container bor_b_e3 col_67 p0 bor_t_e3 hidden-xs" id="guide">
+                <div class="col-md-2 section">
+                    <div class="left pull-left">
+                        <img src="../img/buyTicket.png" alt="">
+                    </div>
+                    <div class="pull-left right">
+                        <div class="size14 col_00">购票指南</div>
+                        <a href="" class="size14">购票流程</a>
+                        <a href="" class="size14">预定说明</a>
+                        <a href="" class="size14">退换及缺货说明</a>
+                    </div>
+                </div>
+                <div class="col-md-2 section">
+                    <div class="left pull-left">
+                        <img src="../img/buyTicket2.png" alt="">
+                    </div>
+                    <div class="pull-left right">
+                        <div class="size14 col_00">订票方式</div>
+                        <a href="" class="size14">电话订票</a>
+                        <a href="" class="size14">在线订票</a>
+                        <a href="" class="size14">上门购票</a>
+                    </div>
+                </div>
+                <div class="col-md-2 section">
+                    <div class="left pull-left">
+                        <img src="../img/shopcar.png" alt="">
+                    </div>
+                    <div class="pull-left right">
+                        <div class="size14 col_00">配送说明</div>
+                        <a href="" class="size14">送货上门</a>
+                        <a href="" class="size14">上门自取</a>
+                    </div>
+                </div>
+                <div class="col-md-2 section">
+                    <div class="left pull-left">
+                        <img src="../img/money.png" alt="">
+                    </div>
+                    <div class="pull-left right">
+                        <div class="size14 col_00">付款方式</div>
+                        <a href="" class="size14">在线支付</a>
+                        <a href="" class="size14">货到付款</a>
+                        <a href="" class="size14">上门付款</a>
+                    </div>
+                </div>
+                <div class="col-md-2 section">
+                    <div class="left pull-left">
+                        <img src="../img/heart.png" alt="">
+                    </div>
+                    <div class="pull-left right">
+                        <div class="size14 col_00">购票指南</div>
+                        <a href="" class="size14">购票流程</a>
+                        <a href="" class="size14">预定说明</a>
+                        <a href="" class="size14">退换及缺货说明</a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- 指南结束 -->
+        <!-- 友情链接开始 -->
+        <!-- <div class="col-xs-12 p0 bg_ff hidden-xs overflow">
+            <div class="container hidden-xs overflow" id="link">
+                <ul class="clearfix">
+                    <li class="col-md-2 p0">
+                        <a href="">
+                            <img src="../img/link.png" class="col-xs-10 col-md-offset-1 p0 bor_cc" alt="">
+                        </a>
+                    </li>
+                    <li class="col-md-2 p0">
+                        <a href="">
+                            <img src="../img/link.png" class="col-xs-10 col-md-offset-1 p0 bor_cc" alt="">
+                        </a>
+                    </li>
+                    <li class="col-md-2 p0">
+                        <a href="">
+                            <img src="../img/link.png" class="col-xs-10 col-md-offset-1 p0 bor_cc" alt="">
+                        </a>
+                    </li>
+                    <li class="col-md-2 p0">
+                        <a href="">
+                            <img src="../img/link.png" class="col-xs-10 col-md-offset-1 p0 bor_cc" alt="">
+                        </a>
+                    </li>
+                    <li class="col-md-2 p0">
+                        <a href="">
+                            <img src="../img/link.png" class="col-xs-10 col-md-offset-1 p0 bor_cc" alt="">
+                        </a>
+                    </li>
+                    <li class="col-md-2 p0">
+                        <a href="">
+                            <img src="../img/link.png" class="col-xs-10 col-md-offset-1 p0 bor_cc" alt="">
+                        </a>
+                    </li>
+                    <li class="col-md-2 p0">
+                        <a href="">
+                            <img src="../img/link.png" class="col-xs-10 col-md-offset-1 p0 bor_cc" alt="">
+                        </a>
+                    </li>
+                    <li class="col-md-2 p0">
+                        <a href="">
+                            <img src="../img/link.png" class="col-xs-10 col-md-offset-1 p0 bor_cc" alt="">
+                        </a>
+                    </li>
+                    <li class="col-md-2 p0">
+                        <a href="">
+                            <img src="../img/link.png" class="col-xs-10 col-md-offset-1 p0 bor_cc" alt="">
+                        </a>
+                    </li>
+                    <li class="col-md-2 p0">
+                        <a href="">
+                            <img src="../img/link.png" class="col-xs-10 col-md-offset-1 p0 bor_cc" alt="">
+                        </a>
+                    </li>
+                    <li class="col-md-2 p0">
+                        <a href="">
+                            <img src="../img/link.png" class="col-xs-10 col-md-offset-1 p0 bor_cc" alt="">
+                        </a>
+                    </li>
+                    <li class="col-md-2 p0">
+                        <a href="">
+                            <img src="../img/link.png" class="col-xs-10 col-md-offset-1 p0 bor_cc" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+        <!-- 友情链接结束 -->
+        <!-- 底部开始 -->
+        <!-- <div id="footer" class="bg_f5 hidden-xs clearfix col-xs-12 overflow">
+            <div class="container col_67 p0">
+                <div class="nav col-md-8 col-md-offset-2 hidden-xs text-center size14 p0">
+                    <a class="bor_r_db" href="">公司简介</a>
+                    <a class="bor_r_db" href="">合作招商</a>
+                    <a class="bor_r_db" href="">合作伙伴</a>
+                    <a class="bor_r_db" href="">隐私声明</a>
+                    <a class="bor_r_db" href="">人才招聘</a>
+                    <a class="bor_r_db" href="">联系我们</a>
+                    <a class="bor_r_db" href="">网站地图</a>
+                    <a class="bor_r_db" href="">友情链接</a>
+                    <a href="">帮助中心</a>
+                </div>
+                <div class="clearfix"></div>
+                <div class="text-center mt10 size14 size12-xs">Copyright 齐鲁艺票通网
+                    <span>鲁ICP备13028754号-4</span>
+                </div>
+                <div class="text-center mt10 size14 size12-xs">版权所有：山东文化传媒有限公司 市场开发部：0531-88116156</div>
+            </div>
+        </div> -->
+        <!-- 底部结束 -->
+        <!-- 左侧悬浮导航开始 -->
+        <!-- <div class="leftNav clearfix">
+            <ul class="hidden-xs text-center">
+                <li>
+                    <a href="#drama" class="drama bg_ff bor_t_ea">
+                        <img src="../img/nav_i1.png" class="nav_ia" alt="">
+                        <img src="../img/nav_i1c.png" class="nav_ib" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#concert" class="concert bg_ff">
+                        <img src="../img/nav_i2.png" class="nav_ia" alt="">
+                        <img src="../img/nav_i2c.png" class="nav_ib" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#dance" class="dance bg_ff">
+                        <img src="../img/nav_i3.png" class="nav_ia" alt="">
+                        <img src="../img/nav_i3c.png" class="nav_ib" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#quyi" class="quyi bg_ff">
+                        <img src="../img/nav_i4.png" class="nav_ia" alt="">
+                        <img src="../img/nav_i4c.png" class="nav_ib" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#sport" class="sport bg_ff">
+                        <img src="../img/nav_i5.png" class="nav_ia" alt="">
+                        <img src="../img/nav_i5c.png" class="nav_ib" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#childPlay" class="childPlay bg_ff">
+                        <img src="../img/nav_i6.png" class="nav_ia" alt="">
+                        <img src="../img/nav_i6c.png" class="nav_ib" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div> -->
+        <!-- 左侧悬浮导航结束 -->
+    </div>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../lib/html5shiv/html5shiv.min.js"></script>
+      <script src="../lib/respond/respond.min.js"></script>
+    <![endif]-->
+    <script src="../lib/respond/respond.min.js"></script>
+    <script src="../lib/jquery/jquery.1.9.1.js"></script>
+    <script src="../lib/bootstrap/bootstrap.js"></script>
+    <script src="../lib/idangerouSwiper/idangerous.swiper.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/yuanxian-introduced.js"></script>
+</body>
+
+</html>
+
+

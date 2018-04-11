@@ -1,0 +1,85 @@
+/* 顶部 */
+.box{
+    width: 100%;
+    height: 80px;
+    /* box-shadow: 5px 10px 5px 5px red; */
+    box-shadow: 0 1px 3px #ccc;
+    overflow: hidden;
+    margin: 0;
+}
+.box img{
+    width: 100px;
+    height: 50px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 200px;
+}
+.box h4{
+    float: left;
+    height: 80px;
+    line-height: 80px
+}
+
+.back{
+    float: right;
+    margin-right: 200px;
+    margin-top: 33px;
+    padding: 1px 5px;
+    border: .5px solid #ccc;
+    /* border-radius: 2px; */
+}
+
+/* 表单 */
+.register{
+    width: 280px;
+    height: 400px;
+    margin:0 auto;
+    margin-bottom: 50px;
+    padding-top: 120px;
+}
+.form-tel{
+    position: relative;
+    margin-top: 12px;
+}
+.register img{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    left: 3px;
+}
+.form-reg{
+    width: 280px;
+    height: 30px;
+    text-indent: 3em;
+    border: .5px solid #DFDFDF;
+    overflow: hidden;
+    
+}
+.form-regSms{
+    width: 190px;
+    box-sizing: border-box;
+}
+.code{
+    margin-left: 2px;
+    border: .5px solid #DFDFDF;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    vertical-align: top;
+}
+.form-a{
+    width: 280px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 5px;
+    background: red;
+    font-size: 14px;
+}
+
+/* 底部 */
+#footer{
+    border-top: .5px solid #ccc;
+}

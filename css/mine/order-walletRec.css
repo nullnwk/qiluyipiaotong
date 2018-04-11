@@ -1,0 +1,72 @@
+
+ .box-right{
+    height: 600px;
+    width: 968px;
+}
+
+.tit{
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 25px;
+    background-color: #fff;
+}
+.tit h5{ 
+    height: 41px;
+    line-height: 41px;
+    margin-right: 15px;
+    font-size: 14px;
+    margin: 0;
+}
+ .b-r-cen{
+    width: 100%;
+    height: 528px;
+    background-color: #fff;
+    margin:20px 0;
+    padding: 20px 30px;
+ }
+ .b-r-c-icon{
+     width: 100%;
+     height: 50px;
+     background-color: aliceblue;
+     margin-bottom: 40px;
+ } 
+ .b-r-cen>p{
+     font-size: 12px;
+     margin-bottom: 10px;
+ }
+ .b-r-cen p input{
+     width: 100px;
+     text-indent: 5px;
+ }
+ .b-r-cen .attention, .b-r-cen .service-tel{
+     margin-left: 58px;
+     font-size: 11px;
+     color: #C4C4C4;
+ }
+ .b-r-cen .service-tel{
+     width: 380px;
+     padding:5px 0 5px 40px;
+    border: 1px solid #ccc;
+    background-color: #F9F9F9;
+ }
+ .b-r-cen a{
+    margin-left: 58px;
+     width: 80px;
+     height: 30px;
+     line-height: 30px;
+     font-size: 14px;
+     text-align: center;
+     color: #fff;
+     background-color: red;
+ }
+ .prompted{
+     border: 1px solid #F3E1B0;
+     background-color: #FFFDEE;
+     padding: 10px 20px;
+     margin-top: 20px;
+     font-size: 12px;
+ };
+ .prompted p{
+    margin-bottom: 5px;     
+ }

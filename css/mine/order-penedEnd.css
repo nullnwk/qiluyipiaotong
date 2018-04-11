@@ -1,0 +1,63 @@
+
+ .box-right{
+    /* height: 600px; */
+    width: 968px;
+}
+
+.tit{
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    padding-left: 25px;
+    background-color: #fff;
+}
+.tit h5{ 
+    height: 41px;
+    line-height: 41px;
+    margin-right: 15px;
+    font-size: 14px;
+    margin: 0;
+}
+ .b-r-cen{
+    width: 100%;
+    /* height: 528px; */
+    background-color: #fff;
+    margin:20px 0;
+    padding: 20px 30px;
+ }
+ .b-r-cen i{
+    display: inline-block;
+    color: red;
+}
+ .b-r-c-icon{
+     width: 100%;
+     height: 50px;
+     background-color: aliceblue;
+     margin-bottom: 80px;
+ } 
+ 
+ .b-r-cen{
+     text-align: center;
+ }
+ .b-r-cen p{
+     margin: 50px 0 10px 0;
+     font-size: 16px;
+ }
+ .b-r-cen a{
+    color: red;
+    font-size: 14px;
+    text-decoration: underline;
+ }
+ .b-r-cen .rechargeEnd{
+    width: 85px;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 auto;
+    color: #fff;
+    margin-top:25px; 
+    font-size: 14px;
+    text-decoration: none;
+    background-color: red;
+    border-radius: 3px;
+    
+ }

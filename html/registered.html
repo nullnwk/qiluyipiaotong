@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>公司简介</title>
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../lib/idangerouSwiper/idangerous.swiper.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/registered.css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../css/tpl_list_new.css" rel="stylesheet" type="text/css">
+    <style>
+        .m-crumb {
+            /* margin-left: 72px; */
+            height: 4.0rem;
+            text-align: left;
+            line-height: 5.0rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- <div class="container-fluid wrap p0"> -->
+    <!-- 顶部 -->
+    <div class="col-xs-12 p0 overflow size12-xs box">
+        <img src="../img/logo.png" alt="">
+        <h4 class="h5">&nbsp;&nbsp;|&nbsp;&nbsp;账户注册</h4>
+        <a href="../html/index.html" class="back">返回首页</a>
+    </div>
+    <!-- 表单 -->
+    <div class="register">
+        <form action="">
+            <div class="form-tel">
+                <img src="../img/shopCar.png" alt="">
+                <input type="text" name="" id="tel" class="form-reg" placeholder="请输入手机号码">
+            </div>
+            <div class="form-tel">
+                <img src="../img/shopCar.png" alt="">
+                <input type="text" name="" id="pass" class="form-reg" placeholder="登录密码">
+            </div>
+            <div class="form-tel">
+                <img src="../img/shopCar.png" alt="">
+                <input type="password" name="" id="conPass" class="form-reg" placeholder="确认密码">
+            </div>
+            <div class="form-tel">
+                <img src="../img/shopCar.png" alt="">
+                <input type="text" name="" id="sms" class="form-reg form-regSms" placeholder="短信验证码">
+                <span class="code" id="gets">获取验证码</span>
+                <span class="code" id="zzz">加密</span>
+            </div>
+            <div class="form-tel">
+                <input type="checkbox" name="" id="tongyi"> 我已阅读并同意《齐鲁艺票通会员服务条例》
+            </div>
+            <a href="####" class="form-a" style="color:#fff" id="zhuce">立即注册</a>
+        </form>
+
+    </div>
+
+
+    <!-- </div> -->
+
+
+    <!-- 主体结束 -->
+    <!-- 底部 -->
+    <div id="footer" class=" clearfix col-xs-12 overflow">
+        <div class="container col_67 p0">
+            <div class="nav col-md-8 col-md-offset-2 hidden-xs text-center size14 p0">
+                <a class="bor_r_db" href="">公司简介</a>
+                <a class="bor_r_db" href="">合作招商</a>
+                <a class="bor_r_db" href="">合作伙伴</a>
+                <a class="bor_r_db" href="">隐私声明</a>
+                <a class="bor_r_db" href="">人才招聘</a>
+                <a class="bor_r_db" href="">联系我们</a>
+                <a class="bor_r_db" href="">网站地图</a>
+                <a class="bor_r_db" href="">友情链接</a>
+                <a href="">帮助中心</a>
+            </div>
+            <div class="clearfix"></div>
+            <div class="text-center mt10 size14 size12-xs">Copyright 齐鲁艺票通网
+                <span>鲁ICP备13028754号-4</span>
+            </div>
+            <div class="text-center mt10 size14 size12-xs">版权所有：山东文化传媒有限公司 市场开发部：0531-88116156</div>
+        </div>
+    </div>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../lib/html5shiv/html5shiv.min.js"></script>
+      <script src="../lib/respond/respond.min.js"></script>
+    <![endif]-->
+    <!-- <script src="../lib/respond/respond.min.js"></script> -->
+    <script src="../lib/jquery/jquery.1.9.1.js"></script>
+    <script src="../lib/bootstrap/bootstrap.js"></script>
+    <!-- <script src="../lib/idangerouSwiper/idangerous.swiper.min.js"></script> -->
+    <script src="../js/security.js"></script>
+    <script src="../js/main.js"></script>
+
+
+
+    <script>
+        let tel = $("#tel").val();
+        let password = $("#pass").val();
+        let j = {
+            tel: tel,
+            password: password,
+        }
+        // 获取验证码
+        let obj = {}
+        $("#gets").on("click", function () {
+            $.ajax({
+                url: 'http://192.168.1.163:8080/yptcms/webMUser/push.wo?tel=18554639712&type=m',
+                // data: j,
+                type: 'post',
+                dataType: 'json',
+                success: function (res) {
+                    console.log(res);
+                    obj = res;
+                },
+                error: function (err) {
+                    console.log("错误");
+                    console.log(err);
+                }
+            })
+        })
+        // 加密
+        let obj1 = {}
+        $("#zzz").on("click", function () {
+            // 加密
+            $.ajax({
+                url: "http://192.168.1.163:8080/yptcms/webMUser/tologin.wo",
+                type: "post",
+                dataType: "json",
+                data: { ssid: obj.ssid },     //-----------------------
+                success: function (data) {
+                    console.log(data)
+                    if (data.statusCode == "200") {
+                        obj1 = data;
+                    }
+                },
+                error: function () {
+                    console.log("错误加密");
+                }
+            })
+        })
+
+        // 注册
+        $("#zhuce").on("click", function () {
+            var key = RSAUtils.getKeyPair(obj1.data.exponent, '', obj1.data.modulus);
+            var password = RSAUtils.encryptedString(key, encodeURIComponent("1234566"));
+            var j = {
+                tel: '18554639712',
+                password: password,
+                ssid: obj1.data.ssid,
+                msgCode: $("#sms").val()
+            }
+            // console.log(j);
+            $.ajax({
+                url: "http://192.168.1.163:8080/yptcms/webMUser/resetPassword.wo",
+                type: "post",
+                data: j,
+                dataType: "json",
+                success: function (res) {
+                    console.log(j);
+                    console.log(res)
+                },
+                error: function () {
+                    console.log("错误登陆");
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
