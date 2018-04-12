@@ -361,22 +361,24 @@
 
         function uploadPic() {
             var pic = $('#upload_file')[0].files[0];
-            console.log(pic);
+            // console.log(pic);
 
             $.ajax({
                 url: "http://192.168.1.163:8080/yptcms/webMUser/changeHeadImage.wo",
                 // Form数据
                 // data: { pid: "2c982bbf62518657016251a78ce70007" },
-                data: { "file": pic,ssid:"D3037C00906598986299F000E798B9CD" },
+                data: { "file": pic,ssid:"1588C650A0B1A3FD69C9FF7173EB6EF1" },
                 type: "post",
                 dataType: "json",
                 cache: false,
                 contentType: false,
                 processData: false,
                 success: function (data) {
+                    console.log(pic)
                     console.log(data);
                 },
                 error: function (err) {
+                    console.log(pic)
                     console.log("错误");
                 }
             });

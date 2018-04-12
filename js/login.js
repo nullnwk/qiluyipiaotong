@@ -36,7 +36,7 @@ $(function () {
                 let search = window.location.search.substr(1);
                 let a = res.ssid;
                 if (res.statusCode == 200) {
-                    window.location.href = `${search}?${a}`;
+                    // window.location.href = `${search}?${a}`;
                 }
             },
             error: function () {
