@@ -191,7 +191,7 @@
                             <div class="head" style="display:none">
                                 <div class="head-l">
                                     <form action="" id="form1" enctype="multipart/form-data">
-                                        <!-- <input type="file" name="" id="" class="fileImg" onchange="imgPreview(this)"> -->
+                                        <input type="file" name="" id="" class="fileImg" onchange="imgPreview(this)">
                                         <input type="file" name="" id="FileUpload">
                                         <p>仅支持JPG、GIF、PNG、JPEG、BMP、格式，文件小于4M</p>
                                         <div class="file-display">
@@ -281,9 +281,10 @@
 
 
 
-    <form enctype="multipart/form-data" id="uploadForm">
-        <input type="file" name="uploadFile" id="upload_file" style="margin-bottom:10px;">
+    <form enctype="multipart/form-data" id="uploadForm" method="post">
+        <input type="file" name="file" id="upload_file" style="margin-bottom:10px;">
         <input type="button" id="uploadPicButton" value="上传" onclick="uploadPic()">
+        <!-- <input type="submit" value="提交"> -->
     </form>
 
 
@@ -360,22 +361,34 @@
 
 
         function uploadPic() {
+            let searchLogin = window.location.search.substr(1);
             var pic = $('#upload_file')[0].files[0];
             // console.log(pic);
 
+            let j = {
+                ssid: searchLogin,
+                file: pic,
+                
+            }
             $.ajax({
                 url: "http://192.168.1.163:8080/yptcms/webMUser/changeHeadImage.wo",
                 // Form数据
                 // data: { pid: "2c982bbf62518657016251a78ce70007" },
-                data: { "file": pic,ssid:"1588C650A0B1A3FD69C9FF7173EB6EF1" },
+                data: j,
                 type: "post",
                 dataType: "json",
                 cache: false,
                 contentType: false,
                 processData: false,
-                success: function (data) {
+                success: function (res) {
                     console.log(pic)
-                    console.log(data);
+                    console.log(res);
+                    let search = window.location.pathname;
+                    searchLogin = "";
+                    console.log(search);
+                    if (res.statusCode == 300) {
+                        // window.location.href = `../login.html?${search}`;
+                    }
                 },
                 error: function (err) {
                     console.log(pic)
@@ -384,7 +397,7 @@
             });
         } 
     </script>
-<!-- http://39.104.111.170/yptcms -->
+    <!-- http://39.104.111.170/yptcms -->
 </body>
 
 </html>

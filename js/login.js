@@ -1,7 +1,7 @@
 $(function () {
     let obj = {}
     $.ajax({
-        url: "http://39.104.111.170/yptcms/webMUser/tologin.wo",
+        url: "http://192.168.1.163:8080/yptcms/webMUser/tologin.wo",
         type: "post",
         dataType: "json",
         success: function (data) {
@@ -26,7 +26,7 @@ $(function () {
         }
         // console.log(j);
         $.ajax({
-            url: "http://39.104.111.170/yptcms/webMUser/go.wo",
+            url: "http://192.168.1.163:8080/yptcms/webMUser/go.wo",
             type: "post",
             data: j,
             dataType: "json",
@@ -36,7 +36,7 @@ $(function () {
                 let search = window.location.search.substr(1);
                 let a = res.ssid;
                 if (res.statusCode == 200) {
-                    // window.location.href = `${search}?${a}`;
+                    window.location.href = `${search}?${a}`;
                 }
             },
             error: function () {

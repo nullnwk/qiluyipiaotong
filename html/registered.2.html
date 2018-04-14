@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>公司简介</title>
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../lib/idangerouSwiper/idangerous.swiper.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/registered.css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../css/tpl_list_new.css" rel="stylesheet" type="text/css">
+    <style>
+        .m-crumb {
+            /* margin-left: 72px; */
+            height: 4.0rem;
+            text-align: left;
+            line-height: 5.0rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 表单 -->
+    <div class="register">
+        <form action="">
+            <div class="form-tel">
+                <input type="text" name="" id="tel" class="form-reg" placeholder="请输入手机号码">
+            </div>
+            <div class="form-tel">
+                <input type="text" name="" id="pass" class="form-reg" placeholder="登录密码">
+            </div>
+            <input type="file" name="" id="FileUpload">
+            <a href="####" class="form-a" style="color:#fff" id="zhuce">立即注册</a>
+        </form>
+
+    </div>
+
+    <!-- <form enctype="multipart/form-data" id="uploadForm">
+        <input type="file" name="uploadFile" id="upload_file" style="margin-bottom:10px;">
+        <input type="button" id="uploadPicButton" value="上传" onclick="uploadPic()">
+    </form> -->
+
+    <script src="../lib/jquery/jquery.1.9.1.js"></script>
+    <script src="../lib/bootstrap/bootstrap.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+
+        // function utf16toEntities(str) {
+        //     var patt = /[\ud800-\udbff][\udc00-\udfff]/g; // 检测utf16字符正则  
+        //     str = str.replace(patt, function (char) {
+        //         var H, L, code;
+        //         if (char.length === 2) {
+        //             H = char.charCodeAt(0); // 取出高位  
+        //             L = char.charCodeAt(1); // 取出低位  
+        //             code = (H - 0xD800) * 0x400 + 0x10000 + L - 0xDC00; // 转换算法  
+        //             return "&#" + code + ";";
+        //         } else {
+        //             return char;
+        //         }
+        //     });
+        //     return str;
+        // }
+
+
+        // 项目所需参数
+        let projectId = "4028812362ae762c0162ae7703b60003"  //项目id
+        let count = "30";  // 数量
+        let unitPrice = "1000"; //单价
+        let price = count * unitPrice  //总价
+        // 接收返回数据
+        let obj = {};
+        let searchLogin = window.location.search.substr(1);
+        $("#zhuce").on("click", function () {
+            let j = {
+                ssid: searchLogin,
+                projectId: projectId,
+                price: price, //总金额
+                count: count //数量
+            }
+            $.ajax({
+                url: "http://192.168.1.163:8080/yptcms/web/order/querycarduse.wo",
+                data: j,
+                type: "post",
+                dataType: "json",
+                cache: false,
+                success: function (res) {
+                    // console.log(j)
+                    // console.log(res);
+                    let search = window.location.pathname;
+                    searchLogin = "";
+                    // console.log(search);
+
+                    if (res.statusCode == 200) {
+                        obj = res;
+                        let mine = obj.data.single - obj.data.usercount   //个人所用次卡
+                        let project = obj.data.total - obj.data.totalcount  //项目可用次卡
+                        let cika = 0;  //本次可用次卡数
+                        if (mine > project) {
+                            cika = project
+                        } else {
+                            cika = mine;
+                        }
+                        if (obj.data.give > 0) {     //赠送次卡
+                            if (obj.data.purchase + 1 >= cika) {
+                                if (count - cika <= 0) {  //一张次卡一张票
+                                    price = "0.0";
+                                } else {
+                                    price = (count - cika) * unitPrice
+                                }
+                            }
+                            else {
+                                price = (count - obj.data.purchase + 1) * unitPrice
+                            }
+                        } else {
+                            if (obj.data.purchase >= cika) {
+                                if (count - cika <= 0) {  //一张次卡一张票
+                                    price = "0.0";
+                                } else {
+                                    price = (count - cika) * unitPrice
+                                }
+                            }
+                            else {
+                                price = (count - obj.data.purchase) * unitPrice
+                            }
+                            // price = (count -cika) * unitPrice
+                        }
+
+                        console.log(mine);
+                        console.log(project);
+
+                        console.log(count)
+                        console.log(obj.data.purchase);
+                        console.log(cika)
+                        console.log(price)
+                        pay(obj.ssid, projectId, price, count, unitPrice);
+                    } else {
+                        window.location.href = `./login.html?${search}`;
+                    }
+                },
+                error: function (err) {
+                    console.log("错误");
+                }
+            })
+        })
+
+
+        // 获取次卡
+        // $("#zhuce").on("click", function () {
+        function pay(ssid, projectId, price, count, unitPrice) {
+            let j = {
+                ssid: ssid,
+                projectId: projectId,
+                // seatOrder: 1,//座次    
+                // distribution: 1,//配送方式：1现场取票，2快递配送，3上门取票
+                // theTicketAddress: 1,//取票地点
+                // distributionAddress: 1,//配送地址
+                orderMoney: price,//总金额
+                orderItemsCount: count,//订单的商品数量
+                // couponId: 1,//优惠券id
+                // promoCodeDiscount: 1,//优惠码
+                // remark: 0.01,//备注
+                unitPrice: unitPrice,//单价
+                // couponDiscountMoney: 1,//优惠券优惠金额(元) 
+            }
+            $.ajax({
+                url: "http://192.168.1.163:8080/yptcms/web/order/add.wo",
+                data: j,
+                type: "post",
+                dataType: "json",
+                cache: false,
+                success: function (res) {
+                    console.log(j)
+                    console.log(res);
+                },
+                error: function (err) {
+                    // console.log(j);
+                    console.log("错误");
+                }
+            })
+        }
+
+        // })
+
+            // 
+    </script>
+</body>
+
+</html>

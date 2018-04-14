@@ -51,7 +51,21 @@
     <script src="../js/main.js"></script>
     <script>
 
-
+        function utf16toEntities(str) {
+            var patt = /[\ud800-\udbff][\udc00-\udfff]/g; // 检测utf16字符正则  
+            str = str.replace(patt, function (char) {
+                var H, L, code;
+                if (char.length === 2) {
+                    H = char.charCodeAt(0); // 取出高位  
+                    L = char.charCodeAt(1); // 取出低位  
+                    code = (H - 0xD800) * 0x400 + 0x10000 + L - 0xDC00; // 转换算法  
+                    return "&#" + code + ";";
+                } else {
+                    return char;
+                }
+            });
+            return str;
+        }
 
         // 获取次卡
         let searchLogin = window.location.search.substr(1);
@@ -78,10 +92,36 @@
                 // name:"大"
                 // file:""
                 // pid:"2c982bbf62518657016251a771120006"
+
+
+                // pid: "2c982bbf62518657016251a771120006",
+
+                //排序筛选 
+                // projectTypeId: "2c982bbf62518657016251accff5002e",
+                // ssid: "0E706BF74396094482DF4E2B80406322",
+                // startTime:sd,
+                // endTime:sd,
+                // maxPrice:0,
+                // minPrice:5,
+                // // state:0,
+                // sort: 1
+
+                // 反馈
+                // content: utf16toEntities("23412")
+
+                // name: "niu",
+                // birth: "",
+                // userSex:"1",
+
             }
             $.ajax({
-                url: "http://39.104.111.170/yptcms/web/muserrevaddress/queryMuserRevaddressById.wo",
+                url: "http://192.168.1.163:8080/yptcms/web/yptproject/querySeat.wo?code=603682587705217024",                // 
+                // 筛选
+                // url: "http://192.168.1.163:8080/yptcms/web/yptproject/querytype.wo",
                 // url: "http://192.168.1.163:8080/yptcms/web/yptproject/query.wo",
+
+                // 意见反馈
+                // url: "http://192.168.1.163:8080/yptcms/web/opinion/addopinion.wo",
                 data: j,
                 type: "post",
                 dataType: "json",
@@ -94,6 +134,9 @@
                     console.log(search);
                     if (res.statusCode == 300) {
                         window.location.href = `./login.html?${search}`;
+                    }
+                    if(res.statusCode == 200){
+                        console.log(res.data);
                     }
                 },
                 error: function (err) {
