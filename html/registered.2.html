@@ -111,7 +111,7 @@
                                 if (count - cika <= 0) {  //一张次卡一张票
                                     price = "0.0";
                                 } else {
-                                    price = (count - cika) * unitPrice
+                                    price = (count - cika) * unitPrice+".0"
                                 }
                             }
                             else {
@@ -122,11 +122,11 @@
                                 if (count - cika <= 0) {  //一张次卡一张票
                                     price = "0.0";
                                 } else {
-                                    price = (count - cika) * unitPrice
+                                    price = (count - cika) * unitPrice+".0"
                                 }
                             }
                             else {
-                                price = (count - obj.data.purchase) * unitPrice
+                                price = (count - obj.data.purchase) * unitPrice+".0"
                             }
                             // price = (count -cika) * unitPrice
                         }
