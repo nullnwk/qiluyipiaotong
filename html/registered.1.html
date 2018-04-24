@@ -36,8 +36,9 @@
                 <input type="text" name="" id="pass" class="form-reg" placeholder="登录密码">
             </div>
             <input type="file" name="" id="FileUpload">
-            <a href="####" class="form-a" style="color:#fff" id="zhuce">立即注册</a>
+            <a href="#####" class="form-a" style="color:#fff" id="zhuce">立即注册</a>
         </form>
+        <img src="../img/20111008174117253.jpg" alt="">
 
     </div>
 
@@ -50,111 +51,43 @@
     <script src="../lib/bootstrap/bootstrap.js"></script>
     <script src="../js/main.js"></script>
     <script>
-
-        function utf16toEntities(str) {
-            var patt = /[\ud800-\udbff][\udc00-\udfff]/g; // 检测utf16字符正则  
-            str = str.replace(patt, function (char) {
-                var H, L, code;
-                if (char.length === 2) {
-                    H = char.charCodeAt(0); // 取出高位  
-                    L = char.charCodeAt(1); // 取出低位  
-                    code = (H - 0xD800) * 0x400 + 0x10000 + L - 0xDC00; // 转换算法  
-                    return "&#" + code + ";";
-                } else {
-                    return char;
-                }
-            });
-            return str;
-        }
-
         // 获取次卡
         let searchLogin = window.location.search.substr(1);
         $("#zhuce").on("click", function () {
-            console.log(searchLogin)
-
             let j = {
                 ssid: searchLogin,
-                // name:"234",
-
-                // 写评价
-                // projectId :"4028812362ae762c0162ae7703b60003",
-                // content:"123123"
-                // 支付详情
-                // id: "28a915f680b742b28b71b2df4ff61148",
-                // state: "2"
-
-                // ssid: "33CFD078165BBE6F04658410EDDDB059",
-                // detail:"济南市啊啊啊",
-                // name:"niu", 
-                // phone:"18554639712",
-                // id:"526d8723c9866c8123c17991d6ecedec"   //新闻动态
-                // id:"2c982bbf627602bb016279c88729001f"      //政策法规
-                // id:"2c982bbf6285b8d2016285c2ba9c0005"      //通知公告
+                // cardNum:'ypt00000000513',
+                // password:'8952ab',
+                id:'fbaf0a9385d94d7e9b577b3c305aad37',
+                payWay:'W01'
+                // type: "4028810f62a31bc40162a31d05670003",
+                // number: 1,
+                // id:"4028812362e0e85f0162e0f464dd0000",
+                // payWay:"A01"
                 // state:"0"
-                // 优惠券
-                // phone:"18554639712"
-                //收藏
-                // proId:"7A954A0DB7D7EB709BF0EA54C81FB041",
-                // type:"1"
-                // code:"592160155978829824"
-                // state: "2"
-                // name:"大"
-                // file:""
-                // pid:"2c982bbf62518657016251a771120006"
-
-
-                // pid: "2c982bbf62518657016251a771120006",
-
-                //排序筛选 
-                // projectTypeId: "2c982bbf62518657016251accff5002e",
-                // ssid: "0E706BF74396094482DF4E2B80406322",
-                // startTime:sd,
-                // endTime:sd,
-                // maxPrice:0,
-                // minPrice:5,
-                // state:2,
-                // sort: 1
-
-
-
-                // 反馈
-                // content: utf16toEntities("23412")
-
-                // name: "niu",
-                // birth: "",
-                // userSex:"1",
-
             }
             $.ajax({
-                // url: "http://192.168.1.163:8080/yptcms/web/order/query.wo",                // 
-                url: "http://192.168.1.163:8080/yptcms/web/yptproject/query.wo",                // 
-                // 筛选
-                // url: "http://192.168.1.163:8080/yptcms/web/yptproject/querytype.wo",
-                // url: "http://192.168.1.163:8080/yptcms/web/yptproject/query.wo",
-
-                // 意见反馈
-                // url: "http://192.168.1.163:8080/yptcms/web/opinion/addopinion.wo",
+                // url: "http://39.104.111.170/yptcms/web/yptcard/selectSale.wo",
+                // url: "http://39.104.111.170/yptcms/web/yptcard/addCardOrder.wo",
+                // url: "http://39.104.111.170/yptcms/web/yptcard/webPaycard.wo",
+                // url: "http://39.104.111.170/yptcms/web/yptcard/selectCardOrder.wo",
+                url: "http://39.104.111.170/yptcms/web/order/webPaycard.wo",
                 data: j,
                 type: "post",
                 dataType: "json",
                 cache: false,
                 success: function (res) {
-                    console.log(j)
+                    // console.log(j)
                     console.log(res);
                     let search = window.location.pathname;
                     searchLogin = "";
-                    console.log(search);
+                    // console.log(search);
                     if (res.statusCode == 300) {
                         window.location.href = `./login.html?${search}`;
                     }
                     if (res.statusCode == 200) {
-                        console.log(res.data);
-                        // res.data.forEach((item,index) => {
-                        //     if(item[index].levelId == "2c982bbf62518657016251a771120006"){
-                        //         console.log(index);
-                        //     }
-                            
-                        // });
+                        console.log(res.data.code_path);
+                        $("img").attr("src",`http://39.104.111.170/yptcms/${res.data.code_path}`);
                     }
                 },
                 error: function (err) {
@@ -165,7 +98,14 @@
         })
 
             // 
-    </script>
+    </script> // 写评价 // projectId :"4028812362ae762c0162ae7703b60003", // content:"123123" // 支付详情 // id: "28a915f680b742b28b71b2df4ff61148",
+    // state: "2" // ssid: "33CFD078165BBE6F04658410EDDDB059", // detail:"济南市啊啊啊", // name:"niu", // phone:"18554639712",
+    // id:"526d8723c9866c8123c17991d6ecedec" //新闻动态 // id:"2c982bbf627602bb016279c88729001f" //政策法规 // id:"2c982bbf6285b8d2016285c2ba9c0005"
+    //通知公告 // state:"0" // 优惠券 // phone:"18554639712" //收藏 // proId:"7A954A0DB7D7EB709BF0EA54C81FB041", // type:"1" // code:"592160155978829824"
+    // state: "2" // name:"大" // file:"" // pid:"2c982bbf62518657016251a771120006" // pid: "2c982bbf62518657016251a771120006",
+    //排序筛选 // projectTypeId: "2c982bbf62518657016251accff5002e", // ssid: "0E706BF74396094482DF4E2B80406322", // startTime:sd,
+    // endTime:sd, // maxPrice:0, // minPrice:5, // state:2, // sort: 1 // 反馈 // content: utf16toEntities("23412") // name:
+    "niu", // birth: "", // userSex:"1",
 </body>
 
 </html>

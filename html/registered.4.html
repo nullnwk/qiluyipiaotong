@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>公司简介</title>
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../lib/idangerouSwiper/idangerous.swiper.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/registered.css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../css/tpl_list_new.css" rel="stylesheet" type="text/css">
+    <style>
+        .m-crumb {
+            /* margin-left: 72px; */
+            height: 4.0rem;
+            text-align: left;
+            line-height: 5.0rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 表单 -->
+    <div class="register">
+        <a href="#####" class="form-a" style="color:#fff" id="zhuce">生成购买次卡订单</a>
+        <a href="#####" class="form-a" style="color:#fff" id="zhuce1">生成二维码支付</a>
+        <a href="#####" class="form-a" style="color:#fff" id="zhuce2">查询次卡订单</a>
+        <a href="#####" class="form-a" style="color:#fff" id="zhuce3">查询我的次卡</a>
+        <img src="../img/20111008174117253.jpg" alt="">
+
+    </div>
+
+    <!-- <form enctype="multipart/form-data" id="uploadForm">
+        <input type="file" name="uploadFile" id="upload_file" style="margin-bottom:10px;">
+        <input type="button" id="uploadPicButton" value="上传" onclick="uploadPic()">
+    </form> -->
+
+    <script src="../lib/jquery/jquery.1.9.1.js"></script>
+    <script src="../lib/bootstrap/bootstrap.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        // 获取次卡
+        let searchLogin = window.location.search.substr(1);
+        var obj = {}
+        var obj1 = {}
+        $("#zhuce").on("click", function () {
+            let j = {
+                ssid: searchLogin,
+                type: "4028813159299b62015929a33e000003",
+                number: 1,
+                // id:"4028812362e0e85f0162e0f464dd0000",
+                // payWay:"A01"
+                // state:"0"
+            }
+            $.ajax({
+                url: "http://39.104.111.170/yptcms/web/yptcard/addCardOrder.wo",    //返回结果
+                // http://39.104.111.170/yptcms/web/yptcard/selectSale.wo
+                data: j,
+                type: "post",
+                dataType: "json",
+                cache: false,
+                success: function (res) {
+                    obj = res;
+                    console.log(obj);
+                    let search = window.location.pathname;
+                    searchLogin = "";
+                    if (res.statusCode == 300) {
+                        window.location.href = `./login.html?${search}`;
+                    }
+                    if (res.statusCode == 200) {
+                        console.log("购买订单生成");
+
+                        obj = res;
+                        console.log(obj);
+                        // $("img").attr("src", `http://39.104.111.170/yptcms/${res.data.code_path}`);
+                    }
+                },
+                error: function (err) {
+                    // console.log(j);
+                    console.log("错误");
+                }
+            })
+        })
+        $("#zhuce1").on("click", function () {
+            // console.log(obj);
+            let j = {
+                ssid: obj.ssid,
+                id: obj.id,
+                payWay: "A01"
+            }
+            $.ajax({
+                url: "http://39.104.111.170/yptcms/web/yptcard/webPaycard.wo",
+                data: j,
+                type: "post",
+                dataType: "json",
+                cache: false,
+                success: function (res) {
+                    console.log(res);
+                    let search = window.location.pathname;
+                    searchLogin = "";
+                    if (res.statusCode == 300) {
+                        // window.location.href = `./login.html?${search}`;
+                    }
+                    if (res.statusCode == 200) {
+                        console.log("生成二维码成功")
+                        $("img").attr("src", `http://39.104.111.170/yptcms/${res.data.code_path}`);
+                        obj1 = res.data;
+                    }
+                },
+                error: function (err) {
+                    // console.log(j);
+                    console.log("错误");
+                }
+            })
+        })
+        $("#zhuce2").on("click", function () {
+            let j = {
+                ssid: obj1.ssid,
+                // ssid: searchLogin,
+                state: '0'
+            }
+            $.ajax({
+                url: "http://39.104.111.170/yptcms/web/yptcard/selectCardOrder.wo",
+                data: j,
+                type: "post",
+                dataType: "json",
+                cache: false,
+                success: function (res) {
+                    // console.log(res);
+                    let search = window.location.pathname;
+                    searchLogin = "";
+                    if (res.statusCode == 300) {
+                        // window.location.href = `./login.html?${search}`;
+                    }
+                    if (res.statusCode == 200) {
+                        console.log("查询成功");
+                        console.log(res)
+                    }
+                },
+                error: function (err) {
+                    // console.log(j);
+                    console.log("错误");
+                }
+            })
+        })
+        $("#zhuce3").on("click", function () {
+            let j = {
+                ssid: searchLogin,
+                // state: '0'
+            }
+            $.ajax({
+                url: "http://39.104.111.170/yptcms/web/yptcard/query.wo",
+                data: j,
+                type: "post",
+                dataType: "json",
+                cache: false,
+                success: function (res) {
+                    // console.log(res);
+                    let search = window.location.pathname;
+                    searchLogin = "";
+                    if (res.statusCode == 300) {
+                        window.location.href = `./login.html?${search}`;
+                    }
+                    if (res.statusCode == 200) {
+                        console.log("我的次卡");
+                        console.log(res)
+                    }
+                },
+                error: function (err) {
+                    // console.log(j);
+                    console.log("错误");
+                }
+            })
+        }) 
+    </script>
+</body>
+
+</html>

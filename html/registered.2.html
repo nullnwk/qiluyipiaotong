@@ -84,7 +84,7 @@
                 count: count //数量
             }
             $.ajax({
-                url: "http://192.168.1.163:8080/yptcms/web/order/querycarduse.wo",
+                url: "http://39.104.111.170/yptcms/web/order/querycarduse.wo",
                 data: j,
                 type: "post",
                 dataType: "json",
@@ -107,39 +107,36 @@
                             cika = mine;
                         }
                         if (obj.data.give > 0) {     //赠送次卡
-                            if (obj.data.purchase + 1 >= cika) {
-                                if (count - cika <= 0) {  //一张次卡一张票
-                                    price = "0.0";
-                                } else {
-                                    price = (count - cika) * unitPrice+".0"
-                                }
-                            }
-                            else {
-                                price = (count - obj.data.purchase + 1) * unitPrice
-                            }
-                        } else {
-                            if (obj.data.purchase >= cika) {
-                                if (count - cika <= 0) {  //一张次卡一张票
-                                    price = "0.0";
-                                } else {
-                                    price = (count - cika) * unitPrice+".0"
-                                }
-                            }
-                            else {
-                                price = (count - obj.data.purchase) * unitPrice+".0"
-                            }
-                            // price = (count -cika) * unitPrice
+                            obj.data.purchase += 1
                         }
+                        if (obj.data.purchase >= cika) {
+                            if (count - cika <= 0) {  //一张次卡一张票
+                                price = "0.0";
+                            } else {
+                                price = (count - cika) * unitPrice + ".0"
+                                // // 优惠券
+                                // youhuiPay = price * 0.5;
+                                // if (yhq.val <= youhuiPay) {
+                                //     yhq.display = "black";
+                                // }
+                                // yhq.array.forEach(item => {
+                                //     item.on("click", function () {
+                                //         price -= item.val
+                                //     })
+                                // });
 
-                        console.log(mine);
-                        console.log(project);
+                            }
+                        }
+                        else {
+                            price = (count - obj.data.purchase) * unitPrice + ".0"
+                        }
+                        // price = (count -cika) * unitPrice
 
-                        console.log(count)
-                        console.log(obj.data.purchase);
-                        console.log(cika)
-                        console.log(price)
+
+
                         pay(obj.ssid, projectId, price, count, unitPrice);
-                    } else {
+                    } 
+                    if(res.statusCode == 300) {
                         window.location.href = `./login.html?${search}`;
                     }
                 },
@@ -148,6 +145,9 @@
                 }
             })
         })
+
+
+
 
 
         // 获取次卡
@@ -169,7 +169,7 @@
                 // couponDiscountMoney: 1,//优惠券优惠金额(元) 
             }
             $.ajax({
-                url: "http://192.168.1.163:8080/yptcms/web/order/add.wo",
+                url: "http://39.104.111.170/yptcms/web/order/add.wo",
                 data: j,
                 type: "post",
                 dataType: "json",

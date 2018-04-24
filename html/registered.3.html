@@ -70,15 +70,16 @@
         // 获取次卡
         let searchLogin = window.location.search.substr(1);
         $("#zhuce").on("click", function () {
-            console.log(searchLogin)
-
+           
             let j = {
                 ssid: searchLogin,
-                type:"3"
+                // type: "3"
+                // state:'2',
+                id:"5fed7b8012604764a79a843df8ba8dcc"
             }
             $.ajax({
-                url: "http://192.168.1.163:8080/yptcms/web/yptcollection/query.wo",                // 
-             
+                url: "http://192.168.1.163:8080/yptcms/web/order/show.wo",                // 
+
                 data: j,
                 type: "post",
                 dataType: "json",
@@ -98,7 +99,7 @@
                         //     if(item[index].levelId == "2c982bbf62518657016251a771120006"){
                         //         console.log(index);
                         //     }
-                            
+
                         // });
                     }
                 },
