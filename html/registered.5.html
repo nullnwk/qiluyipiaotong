@@ -51,37 +51,20 @@
     <script src="../js/main.js"></script>
     <script>
 
-        function utf16toEntities(str) {
-            var patt = /[\ud800-\udbff][\udc00-\udfff]/g; // 检测utf16字符正则  
-            str = str.replace(patt, function (char) {
-                var H, L, code;
-                if (char.length === 2) {
-                    H = char.charCodeAt(0); // 取出高位  
-                    L = char.charCodeAt(1); // 取出低位  
-                    code = (H - 0xD800) * 0x400 + 0x10000 + L - 0xDC00; // 转换算法  
-                    return "&#" + code + ";";
-                } else {
-                    return char;
-                }
-            });
-            return str;
-        }
-
         // 获取次卡
         let searchLogin = window.location.search.substr(1);
         $("#zhuce").on("click", function () {
-           
+
             let j = {
                 ssid: searchLogin,
-                // type: "3"
-                // state:'2',
-                // id:"5fed7b8012604764a79a843df8ba8dcc",
-                // content:"hhhh"
-                // type:'0'
+                state: '0'
+                // phone:'18554639712'
+                // type:'0',
+                // id:"2c982bbf62e0a64b0162e1a0f5580003",
             }
             $.ajax({
-                url: "http://39.104.111.170/yptcms/web/yptproject/query.wo",                // 
-                // url: "http://39.104.111.170/yptcms/web/yptcollection/query.wo",                // 
+                // url: "http://39.104.111.170/yptcms/web/order/show.wo",                // 
+                url: "http://192.168.1.155:8080/yptcms/web/yptcard/query.wo",                // 
 
                 data: j,
                 type: "post",
@@ -93,7 +76,7 @@
                     let search = window.location.pathname;
                     searchLogin = "";
                     console.log(search);
-                    if (res.statusCode == 300) {
+                    if (res.statusCode == 300) { 
                         window.location.href = `./login.html?${search}`;
                     }
                     if (res.statusCode == 200) {

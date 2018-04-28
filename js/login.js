@@ -1,7 +1,7 @@
 $(function () {
     let obj = {}
     $.ajax({
-        url: "http://192.168.1.163:8080/yptcms/webMUser/tologin.wo",
+        url: "http://39.104.111.170/yptcms/webMUser/tologin.wo",
         type: "post",
         dataType: "json",
         success: function (data) {
@@ -18,19 +18,19 @@ $(function () {
 
     $("#dl").on("click", function () {
         var key = RSAUtils.getKeyPair(obj.data.exponent, '', obj.data.modulus);
-        var password = RSAUtils.encryptedString(key, encodeURIComponent("1234566"));
+        var password = RSAUtils.encryptedString(key, encodeURIComponent("123456"));
         var j = {
-            tel: '18554639712',
+            tel: '18663995901',
             password: password,
             ssid: obj.data.ssid
         }
         // console.log(j);
         $.ajax({
-            url: "http://192.168.1.163:8080/yptcms/webMUser/go.wo",
+            url: "http://39.104.111.170/yptcms/webMUser/go.wo",
             type: "post",
             data: j,
             dataType: "json",
-            success: function (res) {
+            success: function (res) { 
                 console.log(res)
                 console.log(j)
                 let search = window.location.search.substr(1);

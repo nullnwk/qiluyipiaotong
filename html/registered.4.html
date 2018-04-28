@@ -121,8 +121,8 @@
         })
         $("#zhuce2").on("click", function () {
             let j = {
-                ssid: obj1.ssid,
-                // ssid: searchLogin,
+                // ssid: obj1.ssid,
+                ssid: searchLogin,
                 state: '0'
             }
             $.ajax({
@@ -136,7 +136,7 @@
                     let search = window.location.pathname;
                     searchLogin = "";
                     if (res.statusCode == 300) {
-                        // window.location.href = `./login.html?${search}`;
+                        window.location.href = `./login.html?${search}`;
                     }
                     if (res.statusCode == 200) {
                         console.log("查询成功");

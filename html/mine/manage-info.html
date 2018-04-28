@@ -371,13 +371,12 @@
                 
             }
             $.ajax({
-                url: "http://192.168.1.163:8080/yptcms/webMUser/changeHeadImage.wo",
+                url: "http://39.104.111.170/yptcms/webMUser/changeHeadImage.wo",
                 // Form数据
                 // data: { pid: "2c982bbf62518657016251a78ce70007" },
                 data: j,
                 type: "post",
                 dataType: "json",
-                cache: false,
                 contentType: false,
                 processData: false,
                 success: function (res) {
@@ -385,9 +384,8 @@
                     console.log(res);
                     let search = window.location.pathname;
                     searchLogin = "";
-                    console.log(search);
                     if (res.statusCode == 300) {
-                        // window.location.href = `../login.html?${search}`;
+                        window.location.href = `../login.html?${search}`;
                     }
                 },
                 error: function (err) {
