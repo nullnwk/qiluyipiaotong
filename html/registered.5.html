@@ -37,6 +37,7 @@
             </div>
             <input type="file" name="" id="FileUpload">
             <a href="####" class="form-a" style="color:#fff" id="zhuce">立即注册</a>
+            <a href="####" class="form-a" style="color:#fff" id="zhuce1">立即注册</a>
         </form>
 
     </div>
@@ -53,18 +54,59 @@
 
         // 获取次卡
         let searchLogin = window.location.search.substr(1);
-        $("#zhuce").on("click", function () {
 
+
+        $("#zhuce").on("click", function () {
             let j = {
                 ssid: searchLogin,
-                state: '0'
-                // phone:'18554639712'
-                // type:'0',
-                // id:"2c982bbf62e0a64b0162e1a0f5580003",
+                // pid:"0"
+                pid:"2c982bbf62518657016251a771120006"
+            }
+            $.ajax({
+                url: "http://39.104.111.170/yptcms/web/yptproject/querytype.wo",                // 
+
+                data: j,
+                type: "post",
+                dataType: "json",
+                cache: false,
+                success: function (res) {
+                    // console.log(j)
+                    // console.log(res);
+                    let search = window.location.pathname;
+                    searchLogin = "";
+                    console.log(search);
+                    if (res.statusCode == 300) {
+                        window.location.href = `./login.html?${search}`;
+                    }
+                    if (res.statusCode == 200) {
+                        console.log(res);
+                        // res.data.forEach((item,index) => {
+                        //     if(item[index].levelId == "2c982bbf62518657016251a771120006"){
+                        //         console.log(index);
+                        //     }
+
+                        // });
+                    }
+                },
+                error: function (err) {
+                    // console.log(j);
+                    console.log("错误");
+                }
+            })
+        })
+
+
+
+
+        $("#zhuce1").on("click", function () {
+            let j = {
+                ssid: searchLogin,
+                rows: "5",
+                page: '1'
             }
             $.ajax({
                 // url: "http://39.104.111.170/yptcms/web/order/show.wo",                // 
-                url: "http://192.168.1.155:8080/yptcms/web/yptcard/query.wo",                // 
+                url: "http://39.104.111.170/yptcms/web/dept/query.wo",                // 
 
                 data: j,
                 type: "post",
@@ -76,7 +118,7 @@
                     let search = window.location.pathname;
                     searchLogin = "";
                     console.log(search);
-                    if (res.statusCode == 300) { 
+                    if (res.statusCode == 300) {
                         window.location.href = `./login.html?${search}`;
                     }
                     if (res.statusCode == 200) {
@@ -85,7 +127,6 @@
                         //     if(item[index].levelId == "2c982bbf62518657016251a771120006"){
                         //         console.log(index);
                         //     }
-
                         // });
                     }
                 },

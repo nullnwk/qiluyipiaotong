@@ -55,10 +55,16 @@
     <script>
         // 项目所需参数
         let projectId = "4028812362ae762c0162ae7703b60003"  //项目id
-        let count = "30";  // 数量
-        let unitPrice = "1000"; //单价
-        let price = count * unitPrice  //总价
-        let cardId = "4028810f6304c164016304e177060007"
+        let count = "10";  // 数量
+        let unitPrice = "0.05"; //单价
+        let price = count * unitPrice;  //总价
+        let cardId = "4028810f6304c164016304e17706000c";
+        let pNo = ""   //优惠券id
+        let couponDiscountMoney = ""  //优惠券金额
+
+        let arrYouhui = [];   //可使用优惠券金额
+        let arrYouhui1 = [];  //可使用优惠券信息
+        let youhuiPay = price / 2  //可使用金额
 
         // 项目可用次卡数
         let total = "";
@@ -67,7 +73,7 @@
         let kaNum = ""
 
         // 次卡 2 6
-        let ka = "6"
+        let ka = "0"
 
 
         // 获取次卡
@@ -75,7 +81,7 @@
             let j = {
                 ssid: searchLogin,
                 projectId: projectId,
-                price: "0.1",
+                price: price,
                 count: count,
                 // cardid: "4028810f6304c164016304e177060007"
             }
@@ -101,51 +107,106 @@
                             kaNum = single
                         } else {
                             kaNum = total
+
                         }
+
+
+                        console.log(kaNum)
+                        // 票价模拟
+                        let arr = [1, 2, 3, 4, 5];
+
+                        console.log(arr)
+
+
+
+
                         // 二次卡
                         if (ka == "2") {
                             // 购买次卡数大于1                            
                             if (count > 1) {
                                 //应做循环(未做)
-                                if (res.data.card.frequency != "0" && kaNum != 0) {
-                                    price = (count - 1) * unitPrice + ".0"
+                                if (res.data.card[0].frequency != "0" && kaNum != 0) {
+                                    // price = (count - 1) * unitPrice + ".0"
+                                    arr = arr.slice(0, arr.length - 1)
+                                    arr.forEach(ele => price += ele)
+
+                                    //使用优惠券
+                                    if (res.data.coupon != "") {
+                                        res.data.coupon.forEach((ele, index) => {
+                                            if (ele.pAmount <= youhuiPay) {
+                                                arrYouhui.push(ele.pAmount)
+                                                arrYouhui1.push(ele)
+                                            }
+                                        })
+                                        // //生成订单需要上传参数
+                                        pNo = arrYouhui1[0].pNo
+                                        couponDiscountMoney = arrYouhui1[0].pAmount
+                                    }
+                                    price -= arrYouhui[0] +"0"
+
+
+
                                 }
                             } else {
-                                price = count * unitPrice + ".0"
+                                // price = count * unitPrice + ".0"
+                                arr.forEach(ele => price += ele)
+                                price += "0"
                             }
                         }
                         // 六次卡
                         if (ka == "6") {
                             if (count % 2 == 0) {
+                                alert(6)
                                 num = count / 2    //本次应可用次卡
-                                if (kaNum > res.data.card.frequency) {   //可用实际次卡数
-                                    kaNum = res.data.card.frequency
+                                if (kaNum > res.data.card[0].frequency) {   //可用实际次卡数
+                                    kaNum = res.data.card[0].frequency
                                 } else {
                                     kaNum = kaNum
                                 }
 
                                 if (kaNum >= num) {
-                                    price = 0;
+                                    price = 0 + ".0";
                                 } else {
-                                    price = (count - kaNum) * unitPrice + ".0"
+                                    // price = (count - kaNum) * unitPrice + ".0"
+                                    arr = arr.slice(0, arr.length - kaNum)
+                                    arr.forEach(ele => price += ele)
+                                    price += "0"
                                 }
 
                             } else {
+                                alert(66)
                                 num = (count - 1) / 2    //本次应可用次卡
-                                if (kaNum > res.data.card.frequency) {   //可用实际次卡数
-                                    kaNum = res.data.card.frequency
+                                if (kaNum > res.data.card[0].frequency) {   //可用实际次卡数
+                                    kaNum = res.data.card[0].frequency
                                 } else {
                                     kaNum = kaNum
                                 }
 
                                 if (kaNum >= num) {
-                                    price = 0;
+                                    price = 0 + ".0";
                                 } else {
-                                    price = Number.parseInt((count - kaNum) * unitPrice) + Number.parseInt(unitPrice) + '.0'
+                                    // price = Number.parseInt((count - kaNum) * unitPrice) + Number.parseInt(unitPrice) + '.0'
+                                    arr = arr.slice(0, arr.length - kaNum)
+                                    arr.forEach(ele => price += ele)
+                                    price += "0"
                                 }
                             }
                         }
 
+
+                        // 没有次卡的情况
+                        if (ka == "0") {
+                            if (res.data.coupon[0]) {
+                                alert(11)
+
+                                arr.forEach(ele => price += ele)
+                                price -= res.data.coupon[0].pAmount + ".0"
+
+
+                                pNo = res.data.coupon[0].pNo
+                                couponDiscountMoney = res.data.coupon[0].pAmount
+                            }
+                        }
                         console.log(price);
                         pay(res.ssid, projectId, price, count, unitPrice)
 
@@ -253,7 +314,8 @@
                 // distributionAddress: 1,//配送地址
                 orderMoney: price,//总金额
                 orderItemsCount: count,//订单的商品数量
-                // couponId: 1,//优惠券id
+                couponId: pNo,//优惠券id
+                couponDiscountMoney: couponDiscountMoney,
                 // promoCodeDiscount: 1,//优惠码
                 // remark: 0.01,//备注
                 unitPrice: unitPrice,//单价
